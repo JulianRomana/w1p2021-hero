@@ -1,4 +1,4 @@
-<template>
+c<template>
   <div class="big-header">
     <h1>{{ message }}</h1>
     <br>
@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      message: 'Tu as retrouvé Sarutobi !'
+      message: 'T\'es mort !'
     };
   }
 };

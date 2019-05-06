@@ -6,8 +6,9 @@ import Where from './components/Where.vue';
 import Wait from './components/Wait.vue';
 import Chill from './components/Chill.vue';
 import Dangerous from './components/Dangerous.vue';
-import Dead from './components/Dead.vue';
-import End from './components/End.vue';
+import Character from './components/Character.vue';
+import Win from './components/Win.vue';
+import Loose from './components/Loose.vue';
 
 Vue.use(Router);
 
@@ -26,6 +27,11 @@ const router = new Router({
       component: Where
     },
     {
+      path: '/character',
+      name: 'character',
+      component: Character
+    },
+    {
       path: '/chill',
       name: 'chill',
       component: Chill
@@ -36,14 +42,14 @@ const router = new Router({
       component: Dangerous
     },
     {
-      path: '/dead',
-      name: 'dead',
-      component: Dead
+      path: '/loose',
+      name: 'loose',
+      component: Loose
     },
     {
-      path: '/end',
-      name: 'end',
-      component: End
+      path: '/win',
+      name: 'win',
+      component: Win
     },
     {
       path: '*',

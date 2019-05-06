@@ -33,3 +33,18 @@ textarea {
   display: inline-block;
   border: none;
 }
+.character {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  .character__one {
+    height: 500px;
+    width: 200px;
+    background-color: red;
+  }
+  .character__two {
+    height: 500px;
+    width: 200px;
+    background-color: blue;
+  }
+}
