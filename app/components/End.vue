@@ -1,4 +1,4 @@
-c<template>
+<template>
   <div class="big-header">
     <h1>{{ message }}</h1>
     <br>

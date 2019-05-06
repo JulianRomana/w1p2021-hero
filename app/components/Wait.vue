@@ -6,8 +6,6 @@
   </div>
 </template>
 <script>
-import game from '../';
-
 export default {
   data() {
     return {
