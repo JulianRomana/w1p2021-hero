@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      message: "You died"
+      message: 'Tu es mort par un ninja du son '
     };
   }
 };

@@ -2,7 +2,7 @@ c<template>
   <div class="big-header">
     <h1>{{ message }}</h1>
     <br>
-    <router-link class="button" to="/">Return to home</router-link>
+    <router-link class="button" to="/">Recommencer</router-link>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ c<template>
 export default {
   data() {
     return {
-      message: 'You survived'
+      message: 'Tu as retrouvé Sarutobi !'
     };
   }
 };

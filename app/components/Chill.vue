@@ -1,11 +1,17 @@
 <template>
   <div class="big-header">
-    <h1>Page</h1>
+    <h1>{{ message }}</h1>
     <br>
-    <router-link class="button" to="/end">Lourd</router-link>
+    <router-link class="button" to="/end">Continuer</router-link>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      message: 'Suna'
+    };
+  }
+};
 </script>
