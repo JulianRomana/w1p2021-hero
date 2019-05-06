@@ -3,6 +3,7 @@ import Router from 'vue-router';
 
 import Home from './components/Home.vue';
 import Page from './components/Page.vue';
+import Wait from './components/Wait.vue';
 
 Vue.use(Router);
 
@@ -13,18 +14,19 @@ const router = new Router({
     {
       path: '/',
       name: 'home',
-      component: Home,
+      component: Home
     },
     {
       path: '/page',
       name: 'page',
-      component: Page,
+      component: Page
     },
     {
       path: '*',
-      redirect: { name: 'home' },
-    },
-  ],
+      name: 'home',
+      component: Wait
+    }
+  ]
 });
 
 export default router;
