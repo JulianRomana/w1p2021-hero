@@ -2,16 +2,15 @@
   <div class="big-header">
     <h1>{{ message }}</h1>
     <br>
-    <router-link class="button" to="/">Go to Home</router-link>
+    <router-link class="button" to="/">Return to home</router-link>
   </div>
 </template>
-<script>
-import game from '../';
 
+<script>
 export default {
   data() {
     return {
-      message: 'Eh oh coquin qu\'es ce que tu fais là'
+      message: "You died"
     };
   }
 };
