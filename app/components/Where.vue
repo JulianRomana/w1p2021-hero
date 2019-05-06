@@ -2,8 +2,8 @@
   <div class="big-header">
     <h1>Page</h1>
     <br>
-    <router-link class="button" to="/">Chemin tranquille</router-link>
-    <router-link class="button" to="/">Chemin dangereux</router-link>
+    <router-link class="button" to="/Chill">Chemin tranquille</router-link>
+    <router-link class="button" to="/Dangerous">Chemin dangereux</router-link>
   </div>
 </template>
 
