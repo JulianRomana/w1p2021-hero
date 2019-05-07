@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      message: 'Forêt de la mort qui tue'
+      message: 'Forêt de la mort'
     };
   }
 };

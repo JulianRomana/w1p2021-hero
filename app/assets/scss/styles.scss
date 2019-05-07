@@ -48,3 +48,50 @@ textarea {
     background-color: blue;
   }
 }
+
+/* .pane-enter-active,
+.pane-leave-active {
+  animation: fake 2s;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    transform: translateX(100vw);
+    transition: transform 5s;
+  }
+}
+.pane-leave-to {
+  &::before {
+    transform: translateX(-100vw);
+  }
+}
+.pane-enter {
+  &::before {
+    transform: translateX(100vw);
+  }
+}
+.pane-enter-to {
+  &::before {
+    transform: translateX(-100vw);
+  }
+} */
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+/*   .black-leave-active {
+animation: toBlack 1s;
+}
+.black-enter-active {
+animation: toBlack 1s reverse;
+animation-delay: 1s;
+}
+@keyframes toBlack{
+to {
+  opacity: 0;
+} */
