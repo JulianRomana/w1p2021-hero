@@ -3,7 +3,7 @@
     <h1>Choix du perso</h1>
     <br>
     <section class="character">
-      <Character :character="characters[0]" />
+      <Character v-for="character in characters" :key="character.name" :character="character" />
     </section>
     <router-link class="button" to="/where">Jouer</router-link>
   </div>

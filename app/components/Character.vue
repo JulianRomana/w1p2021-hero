@@ -10,6 +10,6 @@ h1 {
 </style>
 <script>
 export default {
-  props: ['character']
+  props: ["character"]
 };
 </script>
