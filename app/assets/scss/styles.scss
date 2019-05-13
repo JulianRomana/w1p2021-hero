@@ -12,24 +12,32 @@ textarea {
 }
 
 .big-header {
-  background-color: $hetic-green;
+  background-image: url("../pictures/thumb-1920-605599.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
+  font-family: "Permanent Marker", cursive;
 
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
 
   color: white;
+
+  h1 {
+    margin-top: 100px;
+    font-size: 36px;
+  }
 }
 
 .button {
   color: $hetic-green;
   text-decoration: none;
   background: white;
-  padding: 5px;
+  padding: 20px;
   border-radius: 5px;
+  font-size: 24px;
   display: inline-block;
   border: none;
 }
