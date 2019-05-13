@@ -8,7 +8,6 @@
     <router-link class="button" to="/where">Jouer</router-link>
   </div>
 </template>
-
 <script>
 import Character from './Character.vue';
 export default {

@@ -5,4 +5,3 @@ import router from './router';
 new Vue({ router: router }).$mount('#root');
 
 import Phases from './assets/data/data.json';
-console.log(Phases.phases.phase1);

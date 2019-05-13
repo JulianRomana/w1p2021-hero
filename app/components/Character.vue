@@ -1,15 +1,16 @@
 <template>
   <div>
-    <h1>{{ character.name }}</h1>
+    <h2>{{ character.name }}</h2>
   </div>
 </template>
 <style scoped>
-h1 {
-  color: red;
+h2 {
+  color: white;
+  font-size: 50px;
 }
 </style>
 <script>
 export default {
-  props: ["character"]
+  props: ['character']
 };
 </script>
