@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{ character.name }}</h2>
-    <img :src="character.image" alt="Ninja" @click="choose()">
+    <img :src="character.image" alt="Ninja" @click="choose">
   </div>
 </template>
 <style scoped>
@@ -19,10 +19,9 @@ export default {
   methods: {
     choose() {
       let currentCharacter = 'default';
-      const image = document.querySelector('img');
+      let memo;
       currentCharacter = this.character.name;
       console.log(this.character.image);
-      image.classList.toggle('selected');
     }
   }
 };

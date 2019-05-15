@@ -1,34 +1,32 @@
 {
-  "phases": {
-    "id1": {},
-    "id2": {},
-    "id3": {},
-    "id4": {},
-    "id5": {},
-    "id6": {},
-    "id7": {},
-    "id8": {},
-    "id9": {},
-    "id10": {},
-    "id11": {},
-    "id12": {},
-    "id13": {},
-    "id14": {},
-    "id15": {},
-    "id16": {},
-    "id17": {},
-    "id18": {},
-    "id19": {},
-    "id20": {},
-    "id21": {},
-    "id22": {},
-    "id23": {},
-    "id24": {},
-    "id25": {},
-    "id26": {},
-    "id27": {},
-    "id28": {},
-    "id29": {},
-    "id30": {}
-  }
+  "phases": [
+    {
+      "id": 1,
+      "title": "Bienvenue sur le jeu",
+      "actions": [
+        {
+          "button": "play"
+        }
+      ],
+      "path": {
+        "to": 2,
+        "name": "Selection perso"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Choissisez votre personnage",
+      "actions": [
+        {
+          "choose": {
+            "naruto": "naruto",
+            "sasuke": "sasuke"
+          }
+        }
+      ],
+      "path": {
+        "to": 3
+      }
+    }
+  ]
 }
