@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{ character.name }}</h2>
-    <img :src="character.image" alt="Ninja" @click="choose">
+    <img :src="character.image" alt="Ninja">
   </div>
 </template>
 <style scoped>
@@ -15,14 +15,7 @@ img {
 </style>
 <script>
 export default {
-  props: ['character'],
-  methods: {
-    choose() {
-      let currentCharacter = 'default';
-      let memo;
-      currentCharacter = this.character.name;
-      console.log(this.character.image);
-    }
-  }
+  props: ["character"],
+  methods: {}
 };
 </script>

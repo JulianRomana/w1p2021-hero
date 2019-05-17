@@ -2,30 +2,34 @@
   "phases": [
     {
       "id": 1,
-      "title": "Bienvenue sur le jeu",
+      "title": "Choisissez votre direction",
       "actions": [
         {
-          "button": "play"
-        }
-      ],
-      "path": {
-        "to": 2,
-        "name": "Selection perso"
-      }
-    },
-    {
-      "id": 2,
-      "title": "Choissisez votre personnage",
-      "actions": [
-        {
-          "choose": {
-            "naruto": "naruto",
-            "sasuke": "sasuke"
+          "button": "play",
+          "talk": {
+            "info": ""
           }
         }
       ],
       "path": {
-        "to": 3
+        "name": "suna",
+        "to": 2
+      }
+    },
+    {
+      "id": 2,
+      "title": "Village de Suna",
+      "actions": [
+        {
+          "talk": {
+            "info": "Tiens voici un parchemin qui te permettra de mieux y voir dans le village de kiri"
+          }
+        }
+      ],
+      "path": {
+        "name": "kiri",
+        "to": 3,
+        "to": 2
       }
     }
   ]

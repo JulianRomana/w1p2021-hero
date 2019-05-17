@@ -1,13 +1,28 @@
 <template>
   <div>
     <h1>{{ step.step.title }}</h1>
-    <div v-for="action in step.path" :to="path.to.toString()" @click="changeRoute()">{{ path.name }}</div @click="action.route">
+    <h2 />
+    <img class="parchemin" src="/assets/pictures/parchemin.png" alt @click="takeParchemin()">
+    <div v-for="action in step.step.actions" :key="action.path ">{{ step.step.path.name }}</div>
   </div>
 </template>
-
+<style scoped>
+h1 {
+  color: red;
+}
+.parchemin {
+  width: 100px;
+}
+.button {
+  width: 100px;
+  height: 10px;
+  color: red;
+}
+</style>
 <script>
 import game from '/assets/data/data.json';
-//console.log(game.phases[0]);
+import getParchemin from '/services/functions';
+console.log(getParchemin);
 
 export default {
   data: function() {
@@ -22,7 +37,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.step.step);
+    console.log(this.step.step.path.name);
   },
   methods: {
     getStep() {
@@ -31,6 +46,9 @@ export default {
           step => step.id === parseInt(this.$route.params.id)
         )
       };
+    },
+    takeParchemin() {
+      getParchemin.took();
     }
   }
 };
