@@ -1,15 +1,12 @@
 <template>
-  <div>
+  <div class="big-header">
     <h1>{{ step.step.title }}</h1>
     <h2 />
     <img class="parchemin" src="/assets/pictures/parchemin.png" alt @click="takeParchemin()">
-    <div v-for="action in step.step.actions" :key="action.path ">{{ step.step.path.name }}</div>
+    <div v-for="action in step.step.actions" :key="action.path">{{ step.step.path.name }}</div>
   </div>
 </template>
 <style scoped>
-h1 {
-  color: red;
-}
 .parchemin {
   width: 100px;
 }

@@ -4,7 +4,6 @@ class GetParchemin {
   }
   took() {
     this.parchemin = true;
-    console.log('c\'est pris');
     localStorage.setItem('parchemin', 'true');
   }
 }
