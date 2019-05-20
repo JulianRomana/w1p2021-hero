@@ -9,28 +9,39 @@ input,
 select,
 textarea {
   font-family: "Roboto";
-}
-
-.big-header {
   background-image: url("../pictures/thumb-1920-605599.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.big-header {
   height: 100vh;
   font-family: "Permanent Marker", cursive;
 
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-
   color: white;
+  text-align: center;
 
   h1 {
-    margin-top: 100px;
     font-size: 54px;
   }
 }
+.characters {
+  width: 75vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
+  .character {
+    .naruto_character {
+      width: 300px;
+      position: absolute;
+    }
+    .sasuke_character {
+      width: 300px;
+      position: absolute;
+    }
+  }
+}
 .button {
   color: $hetic-green;
   text-decoration: none;
@@ -40,21 +51,6 @@ textarea {
   font-size: 24px;
   display: inline-block;
   border: none;
-}
-.character {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  .character__one {
-    height: 500px;
-    width: 200px;
-    background-color: red;
-  }
-  .character__two {
-    height: 500px;
-    width: 200px;
-    background-color: blue;
-  }
 }
 .selected {
   border: 1px solid white;
@@ -90,7 +86,6 @@ textarea {
   }
 } */
 body {
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
 }
