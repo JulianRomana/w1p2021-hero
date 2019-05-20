@@ -1,7 +1,13 @@
 <template>
-  <div>
+  <div class="character">
     <h2>{{ character.name }}</h2>
-    <img :src="character.image" alt="Ninja">
+    <h3 v-if="character.selected">Selected</h3>
+    <img
+      v-bind:class="[character.class, {selected : character.selected }]"
+      :src="character.image"
+      alt="Ninja"
+      @click="choose(character)"
+    >
   </div>
 </template>
 <style scoped>
@@ -9,13 +15,15 @@ h2 {
   color: white;
   font-size: 50px;
 }
-img {
-  width: 50%;
-}
 </style>
 <script>
 export default {
   props: ["character"],
-  methods: {}
+  methods: {
+    choose(character) {
+      character.selected = true;
+      console.log(character);
+    }
+  }
 };
 </script>
