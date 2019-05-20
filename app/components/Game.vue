@@ -1,25 +1,24 @@
 <template>
-  <div class="big-header">
+  <div class="screen">
     <h1>{{ step.step.name }}</h1>
+    <h2>{{ step.step.to }}</h2>
     <h2 />
     <img class="parchemin" src="/assets/pictures/parchemin.png" alt @click="takeParchemin()">
     <div
       v-for="action in step.step.paths"
       :key="action.name"
+      class="button"
       @click="changePath(action)"
     >
 {{ action.name }}
 </div>
   </div>
 </template>
+
+
 <style scoped>
 .parchemin {
   width: 100px;
-}
-.button {
-  width: 100px;
-  height: 10px;
-  color: red;
 }
 </style>
 <script>
