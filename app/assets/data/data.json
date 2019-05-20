@@ -2,51 +2,41 @@
   "phases": [
     {
       "id": 1,
-      "title": "Choisissez votre direction",
-      "actions": [
+      "name": "Konoha",
+      "paths": [
         {
-          "button": "play",
-          "talk": {
-            "info": ""
-          }
+          "name": "Kiri",
+          "to": 2
+        },
+        {
+          "name": "Suna",
+          "to": 3
         }
-      ],
-      "path": {
-        "name": "suna",
-        "to": 2
-      }
+      ]
     },
     {
       "id": 2,
-      "title": "Village de Suna",
-      "actions": [
+      "name": "Kiri",
+      "paths": [
         {
-          "talk": {
-            "info": "Tiens voici un parchemin qui te permettra de mieux y voir dans le village de kiri"
-          }
+          "name": "Konoha",
+          "to": 1
+        },
+        {
+          "name": "Kiri",
+          "to": 2.1
         }
-      ],
-      "path": {
-        "name": "kiri",
-        "to": 3,
-        "to": 2
-      }
+      ]
     },
     {
       "id": 3,
-      "title": "Village de Suna",
-      "actions": [
+      "name": "Suna",
+      "paths": [
         {
-          "talk": {
-            "info": "Tiens voici un parchemin qui te permettra de mieux y voir dans le village de kiri"
-          }
+          "name": "Suna",
+          "to": 3.1
         }
-      ],
-      "path": {
-        "name": "kiri",
-        "to": 3,
-        "to": 2
-      }
+      ]
     }
   ]
 }
