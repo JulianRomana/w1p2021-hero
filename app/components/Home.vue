@@ -1,11 +1,12 @@
 <template>
   <div class="screen">
-    <h1>{{ message }}</h1>
-    <br>
-    <router-link class="button" to="/characters">Jouer</router-link>
+    <div class="flex">
+      <h1>{{ message }}</h1>
+      <br>
+      <img class="rouleau" src="/assets/pictures/rouleau.png">
+      <router-link class="button" to="/characters">Jouer</router-link>
+    </div>
     <img class="shika" src="/assets/pictures/shikamaru.png">
-    <p></p>
-    <img class="rouleau" src="/assets/pictures/rouleau.png">
   </div>
 </template>
 <style scoped>
@@ -25,17 +26,17 @@ h1 {
   left: 100px;
   top: 100px;
 }
-.rouleau {
-  position: absolute;
-  width: 60%;
-  left: 400px;
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-</style>
-
-<style scoped>
-h2 {
-  color: white;
-  font-size: 50px;
+.rouleau {
+  width: 49%;
+  margin-left: 180px;
+}
+.button {
+  margin-top: -80px;
 }
 </style>
 <script>
