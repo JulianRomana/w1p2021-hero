@@ -31,6 +31,22 @@
         "to": 3,
         "to": 2
       }
+    },
+    {
+      "id": 3,
+      "title": "Village de Suna",
+      "actions": [
+        {
+          "talk": {
+            "info": "Tiens voici un parchemin qui te permettra de mieux y voir dans le village de kiri"
+          }
+        }
+      ],
+      "path": {
+        "name": "kiri",
+        "to": 3,
+        "to": 2
+      }
     }
   ]
 }
