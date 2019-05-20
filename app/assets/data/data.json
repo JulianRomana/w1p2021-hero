@@ -1,34 +1,52 @@
 {
-  "phases": {
-    "id1": {},
-    "id2": {},
-    "id3": {},
-    "id4": {},
-    "id5": {},
-    "id6": {},
-    "id7": {},
-    "id8": {},
-    "id9": {},
-    "id10": {},
-    "id11": {},
-    "id12": {},
-    "id13": {},
-    "id14": {},
-    "id15": {},
-    "id16": {},
-    "id17": {},
-    "id18": {},
-    "id19": {},
-    "id20": {},
-    "id21": {},
-    "id22": {},
-    "id23": {},
-    "id24": {},
-    "id25": {},
-    "id26": {},
-    "id27": {},
-    "id28": {},
-    "id29": {},
-    "id30": {}
-  }
+  "phases": [
+    {
+      "id": 1,
+      "title": "Choisissez votre direction",
+      "actions": [
+        {
+          "button": "play",
+          "talk": {
+            "info": ""
+          }
+        }
+      ],
+      "path": {
+        "name": "suna",
+        "to": 2
+      }
+    },
+    {
+      "id": 2,
+      "title": "Village de Suna",
+      "actions": [
+        {
+          "talk": {
+            "info": "Tiens voici un parchemin qui te permettra de mieux y voir dans le village de kiri"
+          }
+        }
+      ],
+      "path": {
+        "name": "kiri",
+        "to": 3,
+        "to": 2
+      }
+    },
+    {
+      "id": 3,
+      "title": "Village de Suna",
+      "actions": [
+        {
+          "talk": {
+            "info": "Tiens voici un parchemin qui te permettra de mieux y voir dans le village de kiri"
+          }
+        }
+      ],
+      "path": {
+        "name": "kiri",
+        "to": 3,
+        "to": 2
+      }
+    }
+  ]
 }
