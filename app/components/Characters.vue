@@ -8,6 +8,13 @@
     <router-link class="button" to="/game/1">Jouer</router-link>
   </div>
 </template>
+<style scoped>
+.screen {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/assets/pictures/valle.jpg");
+}
+</style>
 <script>
 import Character from "./Character.vue";
 export default {

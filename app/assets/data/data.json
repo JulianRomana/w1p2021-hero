@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Konoha",
+      "img": "/pictures/suna.png",
       "paths": [
         {
           "name": "Kiri",

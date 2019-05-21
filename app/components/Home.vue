@@ -11,9 +11,9 @@
 </template>
 <style scoped>
 .screen {
-  background-image: url("/assets/pictures/valle.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("/assets/pictures/valle.jpg");
 }
 h1 {
   padding-top: 50px;
@@ -40,11 +40,15 @@ h1 {
 }
 </style>
 <script>
+import game from "../assets/data/data.js";
+
 export default {
   data() {
     return {
-      message: "Aidez naruto à retrouvez Sarutobi"
+      message: "Aidez naruto à retrouvez Sarutobi",
+      game: game
     };
-  }
+  },
+  methods: {}
 };
 </script>
