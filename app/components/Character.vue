@@ -18,6 +18,9 @@ export default {
   methods: {
     choose() {
       localStorage.setItem('character', this.character.name);
+      localStorage.setItem('characterImage', this.character.image);
+      localStorage.setItem('characterClass', this.character.class);
+      this.$router.push({ name: 'game', params: { id: 1 } });
     }
   }
 };

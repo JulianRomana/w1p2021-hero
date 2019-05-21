@@ -2,6 +2,7 @@
   <div class="screen" :style="getImage(step.step.img)">
     <h1>{{ step.step.name }}</h1>
     <h2>{{ step.step.to }}</h2>
+    <img :class="characterClass" :src="characterImage" alt>
     <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
     <div
       v-for="action in step.step.paths"
@@ -23,6 +24,18 @@
 .parchemin {
   width: 100px;
 }
+.naruto_character {
+  width: 300px;
+  position: absolute;
+  left: 0;
+  top: 200px;
+}
+.sasuke_character {
+  width: 300px;
+  position: absolute;
+  left: 0;
+  top: 200px;
+}
 </style>
 <script>
 import game from '/assets/data/data.js';
@@ -31,7 +44,9 @@ import getParchemin from '/services/functions';
 export default {
   data: function() {
     return {
-      step: this.getStep()
+      step: this.getStep(),
+      characterImage: localStorage.getItem('characterImage'),
+      characterClass: localStorage.getItem('characterClass')
     };
   },
   watch: {
