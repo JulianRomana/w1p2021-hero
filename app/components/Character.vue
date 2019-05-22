@@ -11,16 +11,27 @@ h2 {
   color: white;
   font-size: 50px;
 }
+.character {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 34%;
+}
+.naruto_character {
+  padding-top: 100px;
+}
+.sasuke_character {
+  padding-top: 100px;
+}
 </style>
 <script>
 export default {
-  props: ['character'],
+  props: ["character"],
   methods: {
     choose() {
-      localStorage.setItem('character', this.character.name);
-      localStorage.setItem('characterImage', this.character.image);
-      localStorage.setItem('characterClass', this.character.class);
-      this.$router.push({ name: 'game', params: { id: 1 } });
+      localStorage.setItem("character", this.character.name);
+      localStorage.setItem("characterImage", this.character.image);
+      localStorage.setItem("characterClass", this.character.class);
+      this.$router.push({ name: "game", params: { id: 1 } });
     }
   }
 };
