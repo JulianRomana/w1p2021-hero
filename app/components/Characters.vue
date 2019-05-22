@@ -3,7 +3,7 @@
     <h1>Choix du perso</h1>
     <br>
     <section class="characters">
-      <Character v-for="character in characters" :key="character.name" :character="character"/>
+      <Character v-for="character in characters" :key="character.name" :character="character" />
     </section>
 
     <div>
@@ -24,7 +24,7 @@ audio {
 }
 </style>
 <script>
-import Character from "./Character.vue";
+import Character from './Character.vue';
 export default {
   components: {
     Character
@@ -33,16 +33,16 @@ export default {
     return {
       characters: [
         {
-          name: "Naruto",
-          image: require("../assets/pictures/naruto.png"),
-          class: "naruto_character",
-          sound: require("../assets/musics/gogo.mp3")
+          name: 'Naruto',
+          image: require('../assets/pictures/naruto.png'),
+          class: 'naruto_character',
+          sound: require('../assets/musics/gogo.mp3')
         },
         {
-          name: "Sasuke",
-          image: require("../assets/pictures/sasuke.png"),
-          class: "sasuke_character",
-          sound: require("../assets/musics/badSituation.mp3")
+          name: 'Sasuke',
+          image: require('../assets/pictures/sasuke.png'),
+          class: 'sasuke_character',
+          sound: require('../assets/musics/badSituation.mp3')
         }
       ]
     };

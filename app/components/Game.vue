@@ -22,10 +22,9 @@
 
 <style lang="scss" scoped>
 .image-wrapper {
-  height: 100vh;
   position: absolute;
   left: 0;
-  top: 380px;
+  top: 280px;
   img {
     font-size: 30px;
   }
