@@ -6,6 +6,7 @@ export default {
       id: 1,
       name: 'Konoha',
       img: images.portedekonoha,
+      caption: 'Nous voilà Konoha la ville de départ, partons explorer les autres villes',
       paths: [
         {
           name: 'Kiri',
@@ -21,6 +22,7 @@ export default {
       id: 2,
       name: 'Kiri',
       img: images.kiri,
+      caption: 'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
       paths: [
         {
           name: 'Konoha',
@@ -56,6 +58,7 @@ export default {
       name: 'Kiri 2',
       img: images.kiri,
       element: images.parchemin,
+      caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
           name: 'Kiri 1',
@@ -101,6 +104,7 @@ export default {
       id: 3,
       name: 'Suna',
       img: images.suna,
+      caption: 'Suna le pays du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
       paths: [
         {
           name: 'Konoha',
@@ -161,6 +165,7 @@ export default {
       id: 3.4,
       name: 'Suna 4',
       img: images.suna,
+      caption: 'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
       paths: [
         {
           name: 'Suna 3',
