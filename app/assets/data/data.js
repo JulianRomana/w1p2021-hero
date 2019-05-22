@@ -1,4 +1,5 @@
 const images = require('../pictures/*.png');
+const imagess = require('../pictures/*.jpg');
 console.log(images);
 export default {
   phases: [
@@ -7,7 +8,7 @@ export default {
       name: 'Konoha',
       img: images.portedekonoha,
       caption:
-        'Nous voilà Konoha la ville de départ, partons explorer les autres villes',
+        'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
       paths: [
         {
           name: 'Kiri',
@@ -140,7 +141,7 @@ export default {
     {
       id: 3.2,
       name: 'Suna 2',
-      img: images.suna,
+      img: imagess.suna3,
       caption:
         'Nous voilà enfin dans le centre de Suna !! Vieux hokage j\'arrive DATEBAYO!!!',
       paths: [

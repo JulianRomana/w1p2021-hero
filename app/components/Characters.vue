@@ -7,7 +7,7 @@
     </section>
 
     <div>
-      <audio controls preload="auto">
+      <audio controls preload="auto" autoplay>
         <source src="../assets/musics/gogo.mp3">
       </audio>
     </div>

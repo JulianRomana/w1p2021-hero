@@ -8,7 +8,7 @@
     </div>
     <img class="shika" src="/assets/pictures/shikamaru.png">
     <div>
-      <audio controls preload="auto">
+      <audio controls preload="auto" autoplay>
         <source src="../assets/musics/badSituation.mp3">
       </audio>
     </div>
