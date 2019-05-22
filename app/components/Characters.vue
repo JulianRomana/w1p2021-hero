@@ -5,12 +5,9 @@
     <section class="characters">
       <Character v-for="character in characters" :key="character.name" :character="character" />
     </section>
-
-    <div>
-      <audio controls preload="auto" autoplay>
-        <source src="../assets/musics/gogo.mp3">
-      </audio>
-    </div>
+    <audio controls preload="auto" autoplay>
+      <source src="../assets/musics/gogo.mp3">
+    </audio>
   </div>
 </template>
 <style scoped>
