@@ -9,6 +9,7 @@ input,
 select,
 textarea {
   font-family: "Roboto";
+  overflow: hidden;
 }
 
 .screen {
@@ -46,7 +47,6 @@ textarea {
   border-radius: 5px;
   font-size: 24px;
   display: inline-block;
-  border: none;
   cursor: pointer;
 }
 .selected {

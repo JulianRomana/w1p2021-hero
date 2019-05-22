@@ -7,6 +7,11 @@
       <router-link class="button" to="/characters">Jouer</router-link>
     </div>
     <img class="shika" src="/assets/pictures/shikamaru.png">
+    <div>
+      <audio controls preload="auto">
+        <source src="../assets/musics/badSituation.mp3">
+      </audio>
+    </div>
   </div>
 </template>
 <style scoped>
@@ -37,6 +42,9 @@ h1 {
 }
 .button {
   margin-top: -80px;
+}
+audio {
+  display: none;
 }
 </style>
 <script>

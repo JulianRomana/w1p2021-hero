@@ -5,6 +5,12 @@
     <section class="characters">
       <Character v-for="character in characters" :key="character.name" :character="character"/>
     </section>
+
+    <div>
+      <audio controls preload="auto">
+        <source src="../assets/musics/gogo.mp3">
+      </audio>
+    </div>
   </div>
 </template>
 <style scoped>
@@ -12,6 +18,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/assets/pictures/valle.jpg");
+}
+audio {
+  display: none;
 }
 </style>
 <script>
@@ -26,12 +35,14 @@ export default {
         {
           name: "Naruto",
           image: require("../assets/pictures/naruto.png"),
-          class: "naruto_character"
+          class: "naruto_character",
+          sound: require("../assets/musics/gogo.mp3")
         },
         {
           name: "Sasuke",
           image: require("../assets/pictures/sasuke.png"),
-          class: "sasuke_character"
+          class: "sasuke_character",
+          sound: require("../assets/musics/badSituation.mp3")
         }
       ]
     };

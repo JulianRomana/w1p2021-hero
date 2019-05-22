@@ -31,6 +31,7 @@ export default {
       localStorage.setItem("character", this.character.name);
       localStorage.setItem("characterImage", this.character.image);
       localStorage.setItem("characterClass", this.character.class);
+      localStorage.setItem("characterClass", this.character.sound);
       this.$router.push({ name: "game", params: { id: 1 } });
     }
   }
