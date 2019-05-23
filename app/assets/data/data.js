@@ -112,16 +112,16 @@ export default {
     },
     {
       id: 3,
-      name: 'Suna',
+      name: 'Portes de Suna',
       img: images.suna,
       caption: 'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
       paths: [
         {
-          name: 'Konoha',
+          name: 'Village de Konoha',
           to: 1
         },
         {
-          name: 'Suna 1',
+          name: 'Les rues de Suna',
           to: 3.1
         }
       ]
@@ -186,16 +186,12 @@ export default {
         {
           name: 'Suna 3',
           to: 3.3
-        },
-        {
-          name: 'Village de Konoha',
-          to: 4
         }
       ]
     },
     {
       id: 4,
-      name: 'Konoha ( village )',
+      name: 'Village de Konoha',
       img: images.konoha,
       paths: [
         {
@@ -232,7 +228,7 @@ export default {
     },
     {
       id: 5.1,
-      name: 'Ame 1',
+      name: 'Village de Ame',
       paths: [
         {
           name: 'Ame',

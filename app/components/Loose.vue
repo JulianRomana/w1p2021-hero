@@ -1,5 +1,5 @@
 c<template>
-  <div class="big-header">
+  <div class="screen">
     <h1>{{ message }}</h1>
     <br>
     <router-link class="button" to="/">Recommencer</router-link>
