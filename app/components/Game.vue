@@ -8,16 +8,14 @@
       <img :class="characterClass" :src="characterImage" alt>
     </div>
     <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
-    <img class="enemy" :src="step.step.enemy">
+    <img :class="step.step.class" :src="step.step.enemy">
     <div class="containerButton">
       <div
         v-for="action in step.step.paths"
         :key="action.name"
         class="button"
         @click="changePath(action)"
-      >
-{{ action.name }}
-</div>
+      >{{ action.name }}</div>
     </div>
     <div class="inventory">inventaire</div>
   </div>
@@ -72,12 +70,18 @@
   width: 250px;
   transform: scaleX(-1);
 }
-.enemy {
+.hoodedman {
   position: absolute;
   top: 180px;
   right: 23%;
   width: 250px;
   transform: scaleX(-1);
+}
+.sasori {
+  position: absolute;
+  top: 150px;
+  right: 25%;
+  width: 350px;
 }
 .naruto_character {
   width: 300px;
@@ -92,29 +96,29 @@
 }
 </style>
 <script>
-import game from '/assets/data/data.js';
-import getParchemin from '/services/functions';
+import game from "/assets/data/data.js";
+import getParchemin from "/services/functions";
 
 export default {
   data: function() {
     return {
       step: this.getStep(),
-      characterImage: localStorage.getItem('characterImage'),
-      characterClass: localStorage.getItem('characterClass')
+      characterImage: localStorage.getItem("characterImage"),
+      characterClass: localStorage.getItem("characterClass")
     };
   },
   watch: {
-    '$route.params.id'(to, from) {
-      const local = localStorage.getItem('parchemin');
+    "$route.params.id"(to, from) {
+      const local = localStorage.getItem("parchemin");
       if (local) {
-        this.step.step.caption = 'coucou';
-        localStorage.removeItem('parchemin');
+        this.step.step.caption = "coucou";
+        localStorage.removeItem("parchemin");
       }
-      if (localStorage.getItem('path')) {
+      if (localStorage.getItem("path")) {
       }
       this.step = this.getStep();
       if (this.step.step.id === 7.4) {
-        this.$router.push({ path: '/win' });
+        this.$router.push({ path: "/win" });
       }
     }
   },
@@ -128,14 +132,14 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
-      this.step.step.element = '';
+      this.step.step.element = "";
     },
     changePath(action) {
-      this.$router.push({ name: 'game', params: { id: action.to } });
+      this.$router.push({ name: "game", params: { id: action.to } });
     },
     getImage: function(url) {
       return {
-        'background-image': 'url("' + url + '")'
+        "background-image": 'url("' + url + '")'
       };
     }
   }

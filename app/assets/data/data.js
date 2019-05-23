@@ -7,7 +7,8 @@ export default {
       id: 1,
       name: 'Konoha',
       img: images.portedekonoha,
-      caption: 'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
+      caption:
+        'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
       paths: [
         {
           name: 'Portes de Kiri',
@@ -23,7 +24,8 @@ export default {
       id: 2,
       name: 'Portes de Kiri',
       img: images.kiri,
-      caption: 'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
+      caption:
+        'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
       paths: [
         {
           name: 'Retour à Konoha',
@@ -59,7 +61,8 @@ export default {
       name: 'Ruelle Brumeuse',
       img: images.kiri,
       element: images.parchemin,
-      caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
+      caption:
+        'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
           name: 'Rues de Kiri',
@@ -76,6 +79,7 @@ export default {
       name: 'Etrange personne',
       img: images.kiri,
       enemy: images.hoodedman,
+      class: 'hoodedman',
       caption: 'Un étrange inconnu ... Allons lui parler',
 
       paths: [
@@ -108,7 +112,8 @@ export default {
       id: 3,
       name: 'Suna',
       img: images.suna,
-      caption: 'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
+      caption:
+        'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
       paths: [
         {
           name: 'Konoha',
@@ -124,7 +129,8 @@ export default {
       id: 3.1,
       name: 'Suna 1',
       img: images.suna2,
-      caption: 'Je ne vois pas grand chose avec tout ce sable dans les airs, il faut que je trouve un moyen de me protéger.',
+      caption:
+        'Je ne vois pas grand chose avec tout ce sable dans les airs, il faut que je trouve un moyen de me protéger.',
       paths: [
         {
           name: 'Suna',
@@ -140,7 +146,8 @@ export default {
       id: 3.2,
       name: 'Suna 2',
       img: imagess.suna3,
-      caption: 'Nous voilà enfin dans le centre de Suna !! Vieux hokage j\'arrive DATEBAYO!!!',
+      caption:
+        'Nous voilà enfin dans le centre de Suna !! Vieux hokage j\'arrive DATEBAYO!!!',
       paths: [
         {
           name: 'Suna 1',
@@ -171,7 +178,10 @@ export default {
       id: 3.4,
       name: 'Suna 4',
       img: images.suna,
-      caption: 'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
+      enemy: images.sasori,
+      class: 'sasori',
+      caption:
+        'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
       paths: [
         {
           name: 'Suna 3',
