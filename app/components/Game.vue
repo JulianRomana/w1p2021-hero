@@ -20,7 +20,7 @@
     </div>
     <div class="inventory">
       <h2>inventory</h2>
-      <img class="inventory__parchemin" :src="inventoryParchemin" alt>
+      <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
     </div>
   </div>
 </template>
@@ -44,8 +44,11 @@
   width: 280px;
   height: 180px;
   font-size: 25px;
+  display: flex;
+  align-items: center;
+
   p {
-    margin: 25px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
   }
 }
 
@@ -102,11 +105,15 @@
 }
 .inventory {
   position: absolute;
-  bottom: 100;
-  right: 0;
-  .inventory__parchemin {
-    width: 100px;
-  }
+  top: 5%;
+  right: 5%;
+}
+.is-hidden {
+  width: 80px;
+  opacity: 0;
+}
+.active {
+  opacity: 1;
 }
 .buttonFight {
   color: #083b77;
@@ -137,7 +144,7 @@ export default {
     "$route.params.id"(to, from) {
       const local = localStorage.getItem("parchemin");
       if (local) {
-        this.step.step.caption = "coucou";
+        this.step.step.caption = "Allons retrouver ce chemin";
         localStorage.removeItem("parchemin");
       }
       if (localStorage.getItem("path")) {
