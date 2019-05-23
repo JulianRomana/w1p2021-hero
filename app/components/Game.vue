@@ -8,7 +8,7 @@
       <img :class="characterClass" :src="characterImage" alt>
     </div>
     <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
-    <div :class="step.step.button" alt @click="randomHit()">{{ fightButton }}</div>
+    <div :class="step.step.button" alt @click="randomHit()">{{ step.step.fightButton }}</div>
     <img :class="step.step.class" :src="step.step.enemy">
     <div class="containerButton">
       <div
@@ -16,9 +16,7 @@
         :key="action.name"
         class="button"
         @click="changePath(action)"
-      >
-{{ action.name }}
-</div>
+      >{{ action.name }}</div>
     </div>
     <div class="inventory">
       <h2>inventory</h2>
@@ -128,29 +126,31 @@
 }
 </style>
 <script>
-import game from '/assets/data/data.js';
-import getParchemin from '/services/functions';
+import game from "/assets/data/data.js";
+import getParchemin from "/services/functions";
+
 export default {
   data: function() {
     return {
       step: this.getStep(),
-      characterImage: localStorage.getItem('characterImage'),
-      characterClass: localStorage.getItem('characterClass'),
-      inventoryParchemin: localStorage.getItem('inventoryParchemin')
+      characterImage: localStorage.getItem("characterImage"),
+      characterClass: localStorage.getItem("characterClass"),
+      inventoryParchemin: localStorage.getItem("inventoryParchemin"),
+      isActive: false
     };
   },
   watch: {
-    '$route.params.id'(to, from) {
-      const local = localStorage.getItem('parchemin');
+    "$route.params.id"(to, from) {
+      const local = localStorage.getItem("parchemin");
       if (local) {
-        this.step.step.caption = 'Allons retrouver ce chemin';
-        localStorage.removeItem('parchemin');
+        this.step.step.caption = "Allons retrouver ce chemin";
+        localStorage.removeItem("parchemin");
       }
-      if (localStorage.getItem('path')) {
+      if (localStorage.getItem("path")) {
       }
       this.step = this.getStep();
       if (this.step.step.id === 7.4) {
-        this.$router.push({ path: '/win' });
+        this.$router.push({ path: "/win" });
       }
     }
   },
@@ -165,15 +165,16 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
-      localStorage.setItem('inventoryParchemin', game.phases[3].element);
-      this.step.step.element = '';
+      localStorage.setItem("inventoryParchemin", game.phases[3].element);
+      this.step.step.element = "";
+      this.isActive = true;
     },
     changePath(action) {
-      this.$router.push({ name: 'game', params: { id: action.to } });
+      this.$router.push({ name: "game", params: { id: action.to } });
     },
     getImage: function(url) {
       return {
-        'background-image': 'url("' + url + '")'
+        "background-image": 'url("' + url + '")'
       };
     }
   }
