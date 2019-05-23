@@ -59,7 +59,7 @@ export default {
       id: 2.2,
       name: 'Ruelle Brumeuse',
       img: images.kiri,
-      element: images.parchemin,
+      element: images.Parchemin,
       caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
@@ -150,7 +150,7 @@ export default {
       id: 3.2,
       name: 'Place du village',
       img: imagess.suna3,
-      element: images.parchemin,
+      element: images.Parchemin,
       caption: 'Un parchemin de chance ! Parfait pour les combats. J\'ai ce qu\'il me faut. Retournons à Konoha',
       paths: [
         {

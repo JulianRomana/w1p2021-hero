@@ -56,7 +56,7 @@ export default {
       message: 'Aidez naruto à retrouvez Sarutobi',
       game: game,
       instructions: homepageImage.rouleau,
-      shikamaru: homepageImage.shikamaru
+      shikamaru: homepageImage.Shikamaru
     };
   },
   mounted() {
