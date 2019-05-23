@@ -15,11 +15,13 @@
         :key="action.name"
         class="button"
         @click="changePath(action)"
-      >{{ action.name }}</div>
+      >
+{{ action.name }}
+</div>
     </div>
     <div class="inventory">
       <h2>inventory</h2>
-      <img class="inventory__parchemin" :src="inventoryParchemin" alt>
+      <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
     </div>
   </div>
 </template>
@@ -43,8 +45,11 @@
   width: 280px;
   height: 180px;
   font-size: 25px;
+  display: flex;
+  align-items: center;
+
   p {
-    margin: 25px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
   }
 }
 
@@ -94,43 +99,44 @@
 }
 .inventory {
   position: absolute;
-  bottom: 100;
-  right: 0;
-  .inventory__parchemin {
-    width: 100px;
-  }
+  top: 5%;
+  right: 5%;
+}
+.is-hidden {
+  width: 80px;
+  opacity: 0;
+}
+.active {
+  opacity: 1;
 }
 </style>
 <script>
-import game from "/assets/data/data.js";
-import getParchemin from "/services/functions";
+import game from '/assets/data/data.js';
+import getParchemin from '/services/functions';
 
 export default {
   data: function() {
     return {
       step: this.getStep(),
-<<<<<<< HEAD
       characterImage: localStorage.getItem('characterImage'),
       characterClass: localStorage.getItem('characterClass'),
-      inventoryParchemin: localStorage.getItem('inventoryParchemin')
-=======
-      characterImage: localStorage.getItem("characterImage"),
-      characterClass: localStorage.getItem("characterClass")
->>>>>>> 534e77cae858b1581b4713e6a8760ffd6abfcbda
+      inventoryParchemin: game.phases[3].element,
+      parcheminClass: localStorage.getItem('addClass'),
+      isActive: false
     };
   },
   watch: {
-    "$route.params.id"(to, from) {
-      const local = localStorage.getItem("parchemin");
+    '$route.params.id'(to, from) {
+      const local = localStorage.getItem('parchemin');
       if (local) {
-        this.step.step.caption = "coucou";
-        localStorage.removeItem("parchemin");
+        this.step.step.caption = 'Allons retrouver ce chemin';
+        localStorage.removeItem('parchemin');
       }
-      if (localStorage.getItem("path")) {
+      if (localStorage.getItem('path')) {
       }
       this.step = this.getStep();
       if (this.step.step.id === 7.4) {
-        this.$router.push({ path: "/win" });
+        this.$router.push({ path: '/win' });
       }
     }
   },
@@ -145,19 +151,16 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
-<<<<<<< HEAD
-      localStorage.setItem('inventoryParchemin', game.phases[3].element);
+      localStorage.setItem('addClass', 'is-revealed');
       this.step.step.element = '';
-=======
-      this.step.step.element = "";
->>>>>>> 534e77cae858b1581b4713e6a8760ffd6abfcbda
+      this.isActive = true;
     },
     changePath(action) {
-      this.$router.push({ name: "game", params: { id: action.to } });
+      this.$router.push({ name: 'game', params: { id: action.to } });
     },
     getImage: function(url) {
       return {
-        "background-image": 'url("' + url + '")'
+        'background-image': 'url("' + url + '")'
       };
     }
   }
