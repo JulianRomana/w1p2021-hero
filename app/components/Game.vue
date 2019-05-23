@@ -185,7 +185,9 @@ export default {
       getParchemin.took();
       this.step.step.element = '';
       this.isActive = true;
-      this.noFog = true;
+      if (this.step.step.id === 2.2) {
+        this.noFog = true;
+      }
     },
     changePath(action) {
       this.$router.push({ name: 'game', params: { id: action.to } });

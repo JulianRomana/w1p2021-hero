@@ -1,5 +1,6 @@
 <template>
   <div class="screen">
+    <link rel="preload" as="image" :href="homepageImage">
     <div class="flex">
       <h1>{{ message }}</h1>
       <br>
@@ -48,12 +49,12 @@ audio {
 }
 </style>
 <script>
-import game from '../assets/data/data.js';
-const homepageImage = require('../assets/pictures/*.png');
+import game from "../assets/data/data.js";
+const homepageImage = require("../assets/pictures/*.png");
 export default {
   data() {
     return {
-      message: 'Aidez naruto à retrouvez Sarutobi',
+      message: "Aidez naruto à retrouvez Sarutobi",
       game: game,
       instructions: homepageImage.rouleau,
       shikamaru: homepageImage.Shikamaru
