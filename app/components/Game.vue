@@ -8,7 +8,6 @@
       <img :class="characterClass" :src="characterImage" alt>
     </div>
     <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
-    <div :class="step.step.button" alt @click="randomHit()">{{ step.step.fightButton }}</div>
     <img :class="step.step.class" :src="step.step.enemy">
     <div class="containerButton">
       <div
@@ -19,6 +18,7 @@
       >
 {{ action.name }}
 </div>
+      <div :class="step.step.button" alt @click="randomHit()">{{ step.step.fightButton }}</div>
     </div>
     <div class="inventory">
       <h2>inventory</h2>
@@ -119,12 +119,16 @@
   color: #083b77;
   text-decoration: none;
   background: #ea7739f3;
-  padding: 25px 60px 25px 60px;
+  padding: 20px 35px 20px 35px;
   border-radius: 5px;
   font-size: 30px;
   display: inline-block;
   cursor: pointer;
-  position: absolute;
+}
+
+.buttonFight:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 </style>
 <script>

@@ -10,7 +10,7 @@ c<template>
 export default {
   data() {
     return {
-      message: 'T\'es mort !'
+      message: `t'es mort`
     };
   }
 };
