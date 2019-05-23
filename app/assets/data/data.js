@@ -94,6 +94,8 @@ export default {
       id: 2.4,
       name: 'Zabuza',
       img: images.kiri,
+      enemy: images.zabuza,
+      class: 'zabuza',
       paths: [
         {
           name: 'Ruelle de Kiri',
@@ -173,6 +175,7 @@ export default {
       name: 'Suna 4',
       img: images.suna,
       enemy: images.sasori,
+      button: 'buttonFight',
       class: 'sasori',
       caption: 'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
       paths: [
@@ -189,6 +192,7 @@ export default {
     {
       id: 4,
       name: 'Konoha ( village )',
+      img: images.konoha,
       paths: [
         {
           name: 'Suna 4',
