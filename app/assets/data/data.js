@@ -32,11 +32,11 @@ export default {
           to: 1
         },
         {
-          name: 'rues de Kiri',
+          name: 'Rues de Kiri',
           to: 2.1
         },
         {
-          name: 'Kiri brume',
+          name: 'La brume de Kiri',
           to: 8
         }
       ]
@@ -97,9 +97,10 @@ export default {
       id: 2.4,
       name: 'Zabuza',
       img: images.kiri,
+      caption: 'Zabuza est un grand Ninja du village de Kiri, lance les dés afin de tanter de la battre!',
       enemy: images.zabuza,
       button: 'buttonFight',
-      fightButton: 'Tire un nombre',
+      fightButton: 'Lancer les dés',
       class: 'zabuza',
       paths: [
         {
@@ -107,24 +108,24 @@ export default {
           to: 2.2
         },
         {
-          name: 'Se Battre contre Zabuza',
+          name: 'Lancer les dés',
           to: 4
         }
       ]
     },
     {
       id: 3,
-      name: 'Suna',
+      name: 'Portes de Suna',
       img: images.suna,
       caption:
         'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
       paths: [
         {
-          name: 'Konoha',
+          name: 'Village de Konoha',
           to: 1
         },
         {
-          name: 'Suna 1',
+          name: 'Les rues de Suna',
           to: 3.1
         }
       ]
@@ -192,32 +193,28 @@ export default {
         {
           name: 'Suna 3',
           to: 3.3
-        },
-        {
-          name: 'Konoha ( village )',
-          to: 4
         }
       ]
     },
     {
       id: 4,
-      name: 'Konoha ( village )',
+      name: 'Village de Konoha',
       img: images.konoha,
       paths: [
         {
-          name: 'Suna 4',
-          to: 3.4
+          name: 'Village de Suna',
+          to: 3
         },
         {
-          name: 'Kiri 4',
-          to: 2.4
+          name: 'Village de Kiri',
+          to: 2
         },
         {
-          name: 'Ame',
+          name: 'Village de Ame',
           to: 5
         },
         {
-          name: 'Kumo',
+          name: 'Village de Kumo',
           to: 6
         }
       ]
@@ -227,18 +224,18 @@ export default {
       name: 'Ame',
       paths: [
         {
-          name: 'Konoha ( village )',
+          name: 'Retour à Konoha',
           to: 4
         },
         {
-          name: 'Ame 1',
+          name: 'Rentrez dnas le village Ame',
           to: 5.1
         }
       ]
     },
     {
       id: 5.1,
-      name: 'Ame 1',
+      name: 'Village de Ame',
       paths: [
         {
           name: 'Ame',
@@ -435,10 +432,10 @@ export default {
     {
       id: 8,
       name: 'Kiri Brume',
-      caption: 'Si il y avait une technique secrète dans parchemin pour me d',
+      caption: 'Nous trouverons peut-être une technique secrète pendant notre voyage, afin de faire disparaître la brume.',
       paths: [
         {
-          name: 'Kiri',
+          name: 'Portes de Kiri',
           to: 2
         },
         {
