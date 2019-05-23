@@ -24,7 +24,7 @@
       <h2>Inventaire</h2>
       <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
     </div>
-    <div class="fog">
+    <div class="fog" :class="{noFog: noFog }">
       <img :src="step.step.blockingElement">
     </div>
   </div>
@@ -138,6 +138,9 @@
   width: 100vw;
   height: 100vw;
 }
+.noFog {
+  display: none;
+}
 </style>
 <script>
 import game from '/assets/data/data.js';
@@ -150,19 +153,16 @@ export default {
       characterImage: localStorage.getItem('characterImage'),
       characterClass: localStorage.getItem('characterClass'),
       inventoryParchemin: game.phases[3].element,
-      isActive: false
+      isActive: false,
+      noFog: false
     };
   },
   watch: {
     '$route.params.id'(to, from) {
       const local = localStorage.getItem('parchemin');
-      const path = localStorage.getItem('path');
       if (local) {
         this.step.step.caption = 'Allons retrouver ce chemin';
         localStorage.removeItem('parchemin');
-      }
-      if (path) {
-        this.step.step.blockingElement = '';
       }
       this.step = this.getStep();
       if (this.step.step.id === 7.4) {
@@ -185,6 +185,7 @@ export default {
       getParchemin.took();
       this.step.step.element = '';
       this.isActive = true;
+      this.noFog = true;
     },
     changePath(action) {
       this.$router.push({ name: 'game', params: { id: action.to } });
