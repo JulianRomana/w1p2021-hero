@@ -425,6 +425,7 @@ export default {
       id: 8,
       name: 'Kiri Brume',
       caption: 'Nous trouverons peut-être une technique secrète pendant notre voyage, afin de faire disparaître la brume.',
+      blockingElement: images.fog,
       paths: [
         {
           name: 'Portes de Kiri',

@@ -1,5 +1,8 @@
 <template>
   <div class="screen" :style="getImage(step.step.img)">
+    <div class="fog">
+      <img :src="step.step.blockingElement">
+    </div>
     <h1>{{ step.step.name }}</h1>
     <div class="image-wrapper">
       <div class="speech-bubble">
@@ -130,6 +133,11 @@
   transform: scale(1.1);
   transition: 0.2s;
 }
+
+.fog {
+  width: 100vw;
+  height: 100vw;
+}
 </style>
 <script>
 import game from '/assets/data/data.js';
@@ -141,18 +149,20 @@ export default {
       step: this.getStep(),
       characterImage: localStorage.getItem('characterImage'),
       characterClass: localStorage.getItem('characterClass'),
-      inventoryParchemin: localStorage.getItem('inventoryParchemin'),
+      inventoryParchemin: game.phases[3].element,
       isActive: false
     };
   },
   watch: {
     '$route.params.id'(to, from) {
       const local = localStorage.getItem('parchemin');
+      const path = localStorage.getItem('path');
       if (local) {
         this.step.step.caption = 'Allons retrouver ce chemin';
         localStorage.removeItem('parchemin');
       }
-      if (localStorage.getItem('path')) {
+      if (path) {
+        this.step.step.blockingElement = '';
       }
       this.step = this.getStep();
       if (this.step.step.id === 7.4) {
@@ -173,7 +183,6 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
-      localStorage.setItem('inventoryParchemin', game.phases[3].element);
       this.step.step.element = '';
       this.isActive = true;
     },
