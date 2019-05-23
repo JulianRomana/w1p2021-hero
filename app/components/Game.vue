@@ -21,7 +21,7 @@
       <div :class="step.step.button" alt @click="randomHit()">{{ step.step.fightButton }}</div>
     </div>
     <div class="inventory">
-      <h2>inventory</h2>
+      <h2>Inventaire</h2>
       <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
     </div>
   </div>
@@ -160,7 +160,9 @@ export default {
       }
     }
   },
-  mounted() {},
+  mounted() {
+    console.log(this.step.step.id);
+  },
   methods: {
     getStep() {
       return {
@@ -191,11 +193,18 @@ export default {
         enemy = Math.floor(Math.random() * Math.floor(max));
       }
       getRandomInt(6);
-      console.log(you, enemy);
-      if (you >= enemy) {
-        this.$router.push({ name: 'game', params: { id: 4 } });
-      } else {
-        this.$router.push({ name: 'loose' });
+      if (this.step.step.id === 2.4) {
+        if (you >= enemy) {
+          this.$router.push({ name: 'game', params: { id: 2.5 } });
+        } else {
+          this.$router.push({ name: 'loose' });
+        }
+      } else if (this.step.step.id === 3.4) {
+        if (you >= enemy) {
+          this.$router.push({ name: 'game', params: { id: 4 } });
+        } else {
+          this.$router.push({ name: 'loose' });
+        }
       }
     }
   }

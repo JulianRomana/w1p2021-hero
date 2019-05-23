@@ -41,11 +41,10 @@ textarea {
 .containerButton {
   position: absolute;
   bottom: 10%;
-  left: 10%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
 }
 .button {
   color: #083b77;
@@ -56,7 +55,8 @@ textarea {
   font-size: 30px;
   display: inline-block;
   cursor: pointer;
-  margin-right: 2px;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .button:hover {
@@ -100,6 +100,7 @@ textarea {
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 /*   .black-leave-active {
 animation: toBlack 1s;

@@ -97,12 +97,19 @@ export default {
       caption: 'Zabuza est un grand Ninja du village de Kiri, lance les dés afin de tanter de la battre!',
       enemy: images.zabuza,
       button: 'buttonFight',
-      fightButton: 'Lancer les dés',
+      fightButton: 'Tirer un nombre',
       class: 'zabuza',
+      paths: []
+    },
+    {
+      id: 2.5,
+      name: 'Victoire contre Zabuza',
+      img: images.kiri,
+      caption: 'J\'ai réussi à vaincre Zabuza ! retournons à Konoha pour un débrief',
       paths: [
         {
-          name: 'Ruelle de Kiri',
-          to: 2.2
+          name: 'Retour à Konoha',
+          to: 4
         }
       ]
     },
@@ -124,47 +131,46 @@ export default {
     },
     {
       id: 3.1,
-      name: 'Suna 1',
+      name: 'Rues de Suna',
       img: images.suna2,
       caption: 'Je ne vois pas grand chose avec tout ce sable dans les airs, il faut que je trouve un moyen de me protéger.',
       paths: [
         {
-          name: 'Suna',
+          name: 'Portes de Suna',
           to: 3
         },
         {
-          name: 'Suna 2',
+          name: 'Place du village',
           to: 3.2
         }
       ]
     },
     {
       id: 3.2,
-      name: 'Suna 2',
+      name: 'Place du village',
       img: imagess.suna3,
-      caption: 'Nous voilà enfin dans le centre de Suna !! Vieux hokage j\'arrive DATEBAYO!!!',
+      element: images.parchemin,
+      caption: 'Un parchemin de chance ! Parfait pour les combats. J\'ai ce qu\'il me faut. Retournons à Konoha',
       paths: [
         {
-          name: 'Suna 1',
+          name: 'Rues de Suna',
           to: 3.1
         },
         {
-          name: 'Suna 3',
+          name: 'Retourner à Konoha',
           to: 3.3
         }
       ]
     },
     {
       id: 3.3,
-      name: 'Suna 3',
+      name: 'Attaque surprise de Sasori !',
       img: images.suna,
+      enemy: images.sasori,
+      caption: 'Maudit Sasori, il m\'a prit par surprise',
       paths: [
         {
-          name: 'Suna 2',
-          to: 3.2
-        },
-        {
-          name: 'Suna 4',
+          name: 'Continuer',
           to: 3.4
         }
       ]
@@ -176,14 +182,9 @@ export default {
       enemy: images.sasori,
       class: 'sasori',
       button: 'buttonFight',
-      fightButton: 'Tire un nombre',
+      fightButton: 'Tirer un nombre',
       caption: 'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
-      paths: [
-        {
-          name: 'Suna 3',
-          to: 3.3
-        }
-      ]
+      paths: []
     },
     {
       id: 4,
@@ -191,11 +192,11 @@ export default {
       img: images.konoha,
       paths: [
         {
-          name: 'Village de Suna',
+          name: 'Retour au village de Suna',
           to: 3
         },
         {
-          name: 'Village de Kiri',
+          name: 'Retour au Village de Kiri',
           to: 2
         },
         {
