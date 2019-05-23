@@ -59,8 +59,6 @@ export default {
       shikamaru: homepageImage.Shikamaru
     };
   },
-  mounted() {
-    console.log(this.shikamaru);
-  }
+  mounted() {}
 };
 </script>

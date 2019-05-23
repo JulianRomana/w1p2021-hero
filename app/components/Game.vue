@@ -1,8 +1,5 @@
 <template>
   <div class="screen" :style="getImage(step.step.img)">
-    <div class="fog">
-      <img :src="step.step.blockingElement">
-    </div>
     <h1>{{ step.step.name }}</h1>
     <div class="image-wrapper">
       <div class="speech-bubble">
@@ -26,6 +23,9 @@
     <div class="inventory">
       <h2>Inventaire</h2>
       <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
+    </div>
+    <div class="fog">
+      <img :src="step.step.blockingElement">
     </div>
   </div>
 </template>

@@ -95,7 +95,7 @@ export default {
       id: 2.4,
       name: 'Zabuza',
       img: images.kiri,
-      caption: 'Zabuza est un grand Ninja du village de Kiri, lance les dés afin de tanter de la battre!',
+      caption: 'Zabuza est un grand Ninja du village de Kiri, je suis obligé de le combattre!',
       enemy: images.zabuza,
       button: 'buttonFight',
       fightButton: 'Tirer un nombre',
@@ -168,6 +168,7 @@ export default {
       name: 'Attaque surprise de Sasori !',
       img: images.suna,
       enemy: images.sasori,
+      class: 'sasori',
       caption: 'Maudit Sasori, il m\'a prit par surprise',
       paths: [
         {
