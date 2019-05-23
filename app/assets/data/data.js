@@ -7,11 +7,10 @@ export default {
       id: 1,
       name: 'Konoha',
       img: images.portedekonoha,
-      caption:
-        'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
+      caption: 'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
       paths: [
         {
-          name: 'Kiri',
+          name: 'Portes de Kiri',
           to: 2
         },
         {
@@ -22,17 +21,16 @@ export default {
     },
     {
       id: 2,
-      name: 'Kiri',
+      name: 'Portes de Kiri',
       img: images.kiri,
-      caption:
-        'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
+      caption: 'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
       paths: [
         {
-          name: 'Konoha',
+          name: 'Retour à Konoha',
           to: 1
         },
         {
-          name: 'Kiri 1',
+          name: 'rues de Kiri',
           to: 2.1
         },
         {
@@ -43,48 +41,50 @@ export default {
     },
     {
       id: 2.1,
-      name: 'Kiri 1',
+      name: 'Rues de kiri',
       img: images.kiri,
       paths: [
         {
-          name: 'Kiri',
+          name: 'Retour aux portes de Kiri',
           to: 2
         },
         {
-          name: 'Kiri 2',
+          name: 'Ruelle Brumeuse',
           to: 2.2
         }
       ]
     },
     {
       id: 2.2,
-      name: 'Kiri 2',
+      name: 'Ruelle Brumeuse',
       img: images.kiri,
       element: images.parchemin,
-      caption:
-        'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
+      caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
-          name: 'Kiri 1',
+          name: 'Rues de Kiri',
           to: 2.1
         },
         {
-          name: 'Kiri 3',
+          name: 'S\'enfoncer dans la ruelle',
           to: 2.3
         }
       ]
     },
     {
       id: 2.3,
-      name: 'Kiri 3',
+      name: 'Etrange personne',
       img: images.kiri,
+      enemy: images.hoodedman,
+      caption: 'Un étrange inconnu ... Allons lui parler',
+
       paths: [
         {
-          name: 'Kiri 2',
+          name: 'Ruelle de Kiri',
           to: 2.2
         },
         {
-          name: 'Kiri 4',
+          name: 'Parler à l\'étranger',
           to: 2.4
         }
       ]
@@ -108,15 +108,14 @@ export default {
       id: 3,
       name: 'Suna',
       img: images.suna,
-      caption:
-        'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
+      caption: 'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
       paths: [
         {
           name: 'Konoha',
           to: 1
         },
         {
-          name: 'Suna',
+          name: 'Suna 1',
           to: 3.1
         }
       ]
@@ -125,8 +124,7 @@ export default {
       id: 3.1,
       name: 'Suna 1',
       img: images.suna2,
-      caption:
-        'Je ne vois pas grand chose avec tout ce sable dans les airs, il faut que je trouve un moyen de me protéger.',
+      caption: 'Je ne vois pas grand chose avec tout ce sable dans les airs, il faut que je trouve un moyen de me protéger.',
       paths: [
         {
           name: 'Suna',
@@ -142,8 +140,7 @@ export default {
       id: 3.2,
       name: 'Suna 2',
       img: imagess.suna3,
-      caption:
-        'Nous voilà enfin dans le centre de Suna !! Vieux hokage j\'arrive DATEBAYO!!!',
+      caption: 'Nous voilà enfin dans le centre de Suna !! Vieux hokage j\'arrive DATEBAYO!!!',
       paths: [
         {
           name: 'Suna 1',
@@ -174,8 +171,7 @@ export default {
       id: 3.4,
       name: 'Suna 4',
       img: images.suna,
-      caption:
-        'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
+      caption: 'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
       paths: [
         {
           name: 'Suna 3',
@@ -422,14 +418,15 @@ export default {
     {
       id: 8,
       name: 'Kiri Brume',
+      caption: 'Si il y avait une technique secrète dans parchemin pour me d',
       paths: [
         {
           name: 'Kiri',
           to: 2
         },
         {
-          name: 'Konoha ( village )',
-          to: 4
+          name: 'Entrée de la forêt de la mort',
+          to: 7
         }
       ]
     }

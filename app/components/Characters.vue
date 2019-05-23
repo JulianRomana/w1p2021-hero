@@ -10,11 +10,12 @@
     </audio>
   </div>
 </template>
-<style scoped>
+<style lang="scss" scoped>
 .screen {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/assets/pictures/valle.jpg");
+  background-position: center;
 }
 audio {
   display: none;
@@ -32,13 +33,13 @@ export default {
         {
           name: 'Naruto',
           image: require('../assets/pictures/naruto.png'),
-          class: 'naruto_character',
+          class: 'naruto_character characterz',
           sound: require('../assets/musics/gogo.mp3')
         },
         {
           name: 'Sasuke',
           image: require('../assets/pictures/sasuke.png'),
-          class: 'sasuke_character',
+          class: 'sasuke_character characterz',
           sound: require('../assets/musics/badSituation.mp3')
         }
       ]

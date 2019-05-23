@@ -8,14 +8,18 @@
       <img :class="characterClass" :src="characterImage" alt>
     </div>
     <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
-    <div
-      v-for="action in step.step.paths"
-      :key="action.name"
-      class="button"
-      @click="changePath(action)"
-    >
+    <img class="enemy" :src="step.step.enemy">
+    <div class="containerButton">
+      <div
+        v-for="action in step.step.paths"
+        :key="action.name"
+        class="button"
+        @click="changePath(action)"
+      >
 {{ action.name }}
 </div>
+    </div>
+    <div class="inventory">inventaire</div>
   </div>
 </template>
 
@@ -24,7 +28,7 @@
 .image-wrapper {
   position: absolute;
   left: 0;
-  top: 280px;
+  top: 180px;
   img {
     font-size: 30px;
   }
@@ -62,13 +66,29 @@
   background-repeat: no-repeat;
 }
 .parchemin {
-  width: 100px;
+  position: absolute;
+  top: 180px;
+  right: 20%;
+  width: 250px;
+  transform: scaleX(-1);
+}
+.enemy {
+  position: absolute;
+  top: 180px;
+  right: 23%;
+  width: 250px;
+  transform: scaleX(-1);
 }
 .naruto_character {
   width: 300px;
 }
 .sasuke_character {
   width: 300px;
+}
+.inventory {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 </style>
 <script>

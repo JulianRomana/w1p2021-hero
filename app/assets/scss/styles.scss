@@ -23,10 +23,9 @@ textarea {
   }
 }
 .characters {
-  width: 75vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 
   .character {
     .naruto_character {
@@ -39,16 +38,32 @@ textarea {
     }
   }
 }
+
+.containerButton {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
 .button {
-  color: $hetic-green;
+  color: #083b77;
   text-decoration: none;
-  background: white;
-  padding: 20px;
+  background: #ea7739f3;
+  padding: 25px 60px 25px 60px;
   border-radius: 5px;
-  font-size: 24px;
+  font-size: 30px;
   display: inline-block;
   cursor: pointer;
 }
+
+.button:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
 .selected {
   border: 1px solid white;
 }
