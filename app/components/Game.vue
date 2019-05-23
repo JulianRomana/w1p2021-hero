@@ -18,7 +18,10 @@
         @click="changePath(action)"
       >{{ action.name }}</div>
     </div>
-    <div class="inventory">inventaire</div>
+    <div class="inventory">
+      <h2>inventory</h2>
+      <img class="inventory__parchemin" :src="inventoryParchemin" alt>
+    </div>
   </div>
 </template>
 
@@ -99,8 +102,11 @@
 }
 .inventory {
   position: absolute;
-  bottom: 0;
+  bottom: 100;
   right: 0;
+  .inventory__parchemin {
+    width: 100px;
+  }
 }
 .buttonFight {
   color: #083b77;
@@ -122,8 +128,14 @@ export default {
   data: function() {
     return {
       step: this.getStep(),
+<<<<<<< HEAD
+      characterImage: localStorage.getItem('characterImage'),
+      characterClass: localStorage.getItem('characterClass'),
+      inventoryParchemin: localStorage.getItem('inventoryParchemin')
+=======
       characterImage: localStorage.getItem("characterImage"),
       characterClass: localStorage.getItem("characterClass")
+>>>>>>> 534e77cae858b1581b4713e6a8760ffd6abfcbda
     };
   },
   watch: {
@@ -141,6 +153,7 @@ export default {
       }
     }
   },
+  mounted() {},
   methods: {
     getStep() {
       return {
@@ -151,7 +164,12 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
+<<<<<<< HEAD
+      localStorage.setItem('inventoryParchemin', game.phases[3].element);
+      this.step.step.element = '';
+=======
       this.step.step.element = "";
+>>>>>>> 534e77cae858b1581b4713e6a8760ffd6abfcbda
     },
     changePath(action) {
       this.$router.push({ name: "game", params: { id: action.to } });
