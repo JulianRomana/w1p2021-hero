@@ -8,6 +8,7 @@
       <img :class="characterClass" :src="characterImage" alt>
     </div>
     <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
+    <div :class="step.step.button" alt @click="randomHit()">Tirer un nombre</div>
     <img :class="step.step.class" :src="step.step.enemy">
     <div class="containerButton">
       <div
@@ -77,6 +78,13 @@
   width: 250px;
   transform: scaleX(-1);
 }
+.zabuza {
+  position: absolute;
+  top: 800px;
+  right: 23%;
+  width: 300px;
+  transform: scaleX(-1);
+}
 .sasori {
   position: absolute;
   top: 150px;
@@ -93,6 +101,17 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.buttonFight {
+  color: #083b77;
+  text-decoration: none;
+  background: #ea7739f3;
+  padding: 25px 60px 25px 60px;
+  border-radius: 5px;
+  font-size: 30px;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
 }
 </style>
 <script>

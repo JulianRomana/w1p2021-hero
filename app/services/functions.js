@@ -10,5 +10,4 @@ class GetParchemin {
     localStorage.setItem('path', 'true');
   }
 }
-
 module.exports = new GetParchemin();
