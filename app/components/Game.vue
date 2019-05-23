@@ -201,7 +201,7 @@ export default {
         }
       } else if (this.step.step.id === 3.4) {
         if (you >= enemy) {
-          this.$router.push({ name: 'game', params: { id: 4 } });
+          this.$router.push({ name: 'game', params: { id: 3.5 } });
         } else {
           this.$router.push({ name: 'loose' });
         }

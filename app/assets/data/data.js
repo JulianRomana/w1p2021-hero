@@ -43,6 +43,7 @@ export default {
       id: 2.1,
       name: 'Rues de kiri',
       img: images.kiri,
+      caption: 'Il n\'y a pas grand chose ici, je devrais sûrement avancer ',
       paths: [
         {
           name: 'Retour aux portes de Kiri',
@@ -58,7 +59,7 @@ export default {
       id: 2.2,
       name: 'Ruelle Brumeuse',
       img: images.kiri,
-      element: images.Parchemin,
+      element: images.parchemin,
       caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
@@ -149,7 +150,7 @@ export default {
       id: 3.2,
       name: 'Place du village',
       img: imagess.suna3,
-      element: images.Parchemin,
+      element: images.parchemin,
       caption: 'Un parchemin de chance ! Parfait pour les combats. J\'ai ce qu\'il me faut. Retournons à Konoha',
       paths: [
         {
@@ -177,14 +178,26 @@ export default {
     },
     {
       id: 3.4,
-      name: 'Suna 4',
+      name: 'Combat contre Sasori',
       img: images.suna,
       enemy: images.sasori,
       class: 'sasori',
       button: 'buttonFight',
       fightButton: 'Tirer un nombre',
-      caption: 'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
+      caption: 'Il va falloir que je le combatte, heuresement le parchemin que j\'ai récupéré va m\'aider',
       paths: []
+    },
+    {
+      id: 3.5,
+      name: 'Sasori vaincu',
+      img: images.suna,
+      caption: 'J\'ai réussi à le vaincre ! Je vais pouvoir retourner à Konoha pour un débrief',
+      paths: [
+        {
+          name: 'Retour au village de Konoha',
+          to: 4
+        }
+      ]
     },
     {
       id: 4,
