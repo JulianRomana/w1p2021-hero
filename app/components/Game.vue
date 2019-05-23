@@ -191,9 +191,9 @@ export default {
       getRandomInt(6);
       console.log(you, enemy);
       if (you >= enemy) {
-        this.$router.push({ name: "game", params: { id: 4 } });
+        this.$router.push({ name: 'game', params: { id: 4 } });
       } else {
-        this.$router.push({ name: "loose" });
+        this.$router.push({ name: 'loose' });
       }
     }
   }
