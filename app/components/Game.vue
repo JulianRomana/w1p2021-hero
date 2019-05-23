@@ -178,6 +178,21 @@ export default {
       return {
         "background-image": 'url("' + url + '")'
       };
+    },
+    randomHit() {
+      let you = 0;
+      let enemy = 0;
+      function getRandomInt(max) {
+        you = Math.floor(Math.random() * Math.floor(max));
+        enemy = Math.floor(Math.random() * Math.floor(max));
+      }
+      getRandomInt(6);
+      console.log(you, enemy);
+      if (you >= enemy) {
+        this.$router.push({ name: "game", params: { id: 4 } });
+      } else {
+        this.$router.push({ name: "loose" });
+      }
     }
   }
 };
