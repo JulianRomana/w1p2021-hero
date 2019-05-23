@@ -8,7 +8,7 @@
       <img :class="characterClass" :src="characterImage" alt>
     </div>
     <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
-    <div :class="step.step.button" alt @click="randomHit()">Tirer un nombre</div>
+    <div :class="step.step.button" alt @click="randomHit()">{{ step.step.fightButton }}</div>
     <img :class="step.step.class" :src="step.step.enemy">
     <div class="containerButton">
       <div
@@ -46,12 +46,10 @@
   font-size: 25px;
   display: flex;
   align-items: center;
-
   p {
     margin: 0px 10px 0px 10px;
   }
 }
-
 .speech-bubble:after {
   content: "";
   position: absolute;
@@ -139,7 +137,8 @@ export default {
       step: this.getStep(),
       characterImage: localStorage.getItem("characterImage"),
       characterClass: localStorage.getItem("characterClass"),
-      inventoryParchemin: localStorage.getItem("inventoryParchemin")
+      inventoryParchemin: localStorage.getItem("inventoryParchemin"),
+      isActive: false
     };
   },
   watch: {
@@ -170,6 +169,7 @@ export default {
       getParchemin.took();
       localStorage.setItem("inventoryParchemin", game.phases[3].element);
       this.step.step.element = "";
+      this.isActive = true;
     },
     changePath(action) {
       this.$router.push({ name: "game", params: { id: action.to } });
