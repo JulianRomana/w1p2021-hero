@@ -8,9 +8,7 @@
       <img :class="characterClass" :src="characterImage" alt>
     </div>
     <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
-    <div :class="step.step.button" alt @click="randomHit()">
-      {{ step.step.fightButton }}
-</div>
+    <div :class="step.step.button" alt @click="randomHit()">{{ fightButton }}</div>
     <img :class="step.step.class" :src="step.step.enemy">
     <div class="containerButton">
       <div
@@ -19,14 +17,13 @@
         class="button"
         @click="changePath(action)"
       >
-        {{ action.name }}
-      </div>
+{{ action.name }}
+</div>
     </div>
     <div class="inventory">
       <h2>inventory</h2>
       <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
     </div>
-  </div>
   </div>
 </template>
 
@@ -51,12 +48,10 @@
   font-size: 25px;
   display: flex;
   align-items: center;
-
   p {
     margin: 0px 10px 0px 10px;
   }
 }
-
 .speech-bubble:after {
   content: "";
   position: absolute;
@@ -135,16 +130,13 @@
 <script>
 import game from '/assets/data/data.js';
 import getParchemin from '/services/functions';
-
 export default {
   data: function() {
     return {
       step: this.getStep(),
       characterImage: localStorage.getItem('characterImage'),
       characterClass: localStorage.getItem('characterClass'),
-      inventoryParchemin: game.phases[3].element,
-      parcheminClass: localStorage.getItem('addClass'),
-      isActive: false
+      inventoryParchemin: localStorage.getItem('inventoryParchemin')
     };
   },
   watch: {
@@ -173,9 +165,8 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
-      localStorage.setItem('addClass', 'is-revealed');
+      localStorage.setItem('inventoryParchemin', game.phases[3].element);
       this.step.step.element = '';
-      this.isActive = true;
     },
     changePath(action) {
       this.$router.push({ name: 'game', params: { id: action.to } });
