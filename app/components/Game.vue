@@ -125,6 +125,8 @@
   display: inline-block;
   cursor: pointer;
   position: absolute;
+  bottom: 160px;
+  left: 300px;
 }
 </style>
 <script>
