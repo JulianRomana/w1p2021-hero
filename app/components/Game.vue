@@ -128,14 +128,9 @@ export default {
   data: function() {
     return {
       step: this.getStep(),
-<<<<<<< HEAD
-      characterImage: localStorage.getItem('characterImage'),
-      characterClass: localStorage.getItem('characterClass'),
-      inventoryParchemin: localStorage.getItem('inventoryParchemin')
-=======
       characterImage: localStorage.getItem("characterImage"),
-      characterClass: localStorage.getItem("characterClass")
->>>>>>> 534e77cae858b1581b4713e6a8760ffd6abfcbda
+      characterClass: localStorage.getItem("characterClass"),
+      inventoryParchemin: localStorage.getItem("inventoryParchemin")
     };
   },
   watch: {
@@ -164,12 +159,8 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
-<<<<<<< HEAD
-      localStorage.setItem('inventoryParchemin', game.phases[3].element);
-      this.step.step.element = '';
-=======
+      localStorage.setItem("inventoryParchemin", game.phases[3].element);
       this.step.step.element = "";
->>>>>>> 534e77cae858b1581b4713e6a8760ffd6abfcbda
     },
     changePath(action) {
       this.$router.push({ name: "game", params: { id: action.to } });
