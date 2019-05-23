@@ -19,7 +19,10 @@
 {{ action.name }}
 </div>
     </div>
-    <div class="inventory">inventaire</div>
+    <div class="inventory">
+      <h2>inventory</h2>
+      <img class="inventory__parchemin" :src="inventoryParchemin" alt>
+    </div>
   </div>
 </template>
 
@@ -87,8 +90,11 @@
 }
 .inventory {
   position: absolute;
-  bottom: 0;
+  bottom: 100;
   right: 0;
+  .inventory__parchemin {
+    width: 100px;
+  }
 }
 </style>
 <script>
@@ -100,7 +106,8 @@ export default {
     return {
       step: this.getStep(),
       characterImage: localStorage.getItem('characterImage'),
-      characterClass: localStorage.getItem('characterClass')
+      characterClass: localStorage.getItem('characterClass'),
+      inventoryParchemin: localStorage.getItem('inventoryParchemin')
     };
   },
   watch: {
@@ -118,6 +125,7 @@ export default {
       }
     }
   },
+  mounted() {},
   methods: {
     getStep() {
       return {
@@ -128,6 +136,7 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
+      localStorage.setItem('inventoryParchemin', game.phases[3].element);
       this.step.step.element = '';
     },
     changePath(action) {
