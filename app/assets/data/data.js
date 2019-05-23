@@ -185,10 +185,6 @@ export default {
         {
           name: 'Suna 3',
           to: 3.3
-        },
-        {
-          name: 'Konoha ( village )',
-          to: 4
         }
       ]
     },
