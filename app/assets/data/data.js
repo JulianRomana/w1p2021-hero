@@ -58,7 +58,7 @@ export default {
       id: 2.2,
       name: 'Ruelle Brumeuse',
       img: images.kiri,
-      element: images.parchemin,
+      element: images.Parchemin,
       caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
@@ -149,7 +149,7 @@ export default {
       id: 3.2,
       name: 'Place du village',
       img: imagess.suna3,
-      element: images.parchemin,
+      element: images.Parchemin,
       caption: 'Un parchemin de chance ! Parfait pour les combats. J\'ai ce qu\'il me faut. Retournons à Konoha',
       paths: [
         {
@@ -200,25 +200,25 @@ export default {
           to: 2
         },
         {
-          name: 'Village de Ame',
+          name: 'Vers village de Ame',
           to: 5
         },
         {
-          name: 'Village de Kumo',
+          name: 'Vers village de Kumo',
           to: 6
         }
       ]
     },
     {
       id: 5,
-      name: 'Ame',
+      name: 'Portes de Ame',
       paths: [
         {
           name: 'Retour à Konoha',
           to: 4
         },
         {
-          name: 'Rentrez dnas le village Ame',
+          name: 'Rentrez dans le village Ame',
           to: 5.1
         }
       ]
@@ -228,51 +228,44 @@ export default {
       name: 'Village de Ame',
       paths: [
         {
-          name: 'Ame',
+          name: 'Portes de Ame',
           to: 5
         },
         {
-          name: 'Ame 2',
+          name: 'Exploration des sous sols',
           to: 5.2
         }
       ]
     },
     {
       id: 5.2,
-      name: 'Ame 2',
+      name: 'Sous sols de Ame',
+      caption: 'Je sens la présence de quelqu\'un',
       paths: [
         {
-          name: 'Ame 1',
+          name: 'Village de Ame',
           to: 5.1
         },
         {
-          name: 'Ame 3',
+          name: 'Aller vers cette personne ',
           to: 5.3
         }
       ]
     },
     {
       id: 5.3,
-      name: 'Ame 3',
-      paths: [
-        {
-          name: 'Ame 2',
-          to: 5.2
-        },
-        {
-          name: 'Ame 4',
-          to: 5.4
-        }
-      ]
+      name: 'Pain, le chef du village',
+      enemy: images.pain,
+      caption: 'Encore un combat ! Heuresement que j\'ai récupéré le parchemin à Suna il augmentera mes chances ',
+      fightButton: 'Tirer un nombre',
+      button: 'buttonFight',
+      paths: []
     },
     {
       id: 5.4,
-      name: 'Ame 4',
+      name: 'Victoire contre Pain',
+      caption: 'J\'ai enfin tout ce qu\'il me faut, je sens que la fin est proche',
       paths: [
-        {
-          name: 'Ame 3',
-          to: 5.3
-        },
         {
           name: 'Entrée de la forêt de la mort',
           to: 7
@@ -353,10 +346,6 @@ export default {
       id: 7,
       name: 'Entrée de la forêt de la mort',
       paths: [
-        {
-          name: 'Ame 4',
-          to: 5.4
-        },
         {
           name: 'Forêt de la mort',
           to: 7.1

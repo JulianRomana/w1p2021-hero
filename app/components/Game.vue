@@ -205,6 +205,12 @@ export default {
         } else {
           this.$router.push({ name: 'loose' });
         }
+      } else if (this.step.step.id === 5.3) {
+        if (you >= enemy) {
+          this.$router.push({ name: 'game', params: { id: 5.4 } });
+        } else {
+          this.$router.push({ name: 'loose' });
+        }
       }
     }
   }
