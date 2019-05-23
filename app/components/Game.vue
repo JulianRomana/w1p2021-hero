@@ -8,7 +8,9 @@
       <img :class="characterClass" :src="characterImage" alt>
     </div>
     <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
-    <div :class="step.step.button" alt @click="randomHit()">Tirer un nombre</div>
+    <div :class="step.step.button" alt @click="randomHit()">
+      {{ step.step.fightButton }}
+</div>
     <img :class="step.step.class" :src="step.step.enemy">
     <div class="containerButton">
       <div
@@ -17,13 +19,14 @@
         class="button"
         @click="changePath(action)"
       >
-{{ action.name }}
-</div>
+        {{ action.name }}
+      </div>
     </div>
     <div class="inventory">
       <h2>inventory</h2>
       <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
     </div>
+  </div>
   </div>
 </template>
 

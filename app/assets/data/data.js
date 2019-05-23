@@ -95,6 +95,7 @@ export default {
       name: 'Zabuza',
       img: images.kiri,
       enemy: images.zabuza,
+      fightButton: 'Tire un nombre',
       class: 'zabuza',
       paths: [
         {
@@ -177,6 +178,7 @@ export default {
       enemy: images.sasori,
       button: 'buttonFight',
       class: 'sasori',
+      fightButton: 'Tire un nombre',
       caption: 'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
       paths: [
         {
