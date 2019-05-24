@@ -316,13 +316,14 @@ export default {
       music: musique.enjaille,
       name: 'Kumo',
       caption: 'Nous voilà au Village de Kumo, connu pour sa tranquillité',
+      img: images.villageKumo,
       paths: [
         {
-          name: 'Konoha ( village )',
+          name: 'Retour à Konoha ',
           to: 4
         },
         {
-          name: 'Kumo 1',
+          name: 'Rentrer dans Kumo',
           to: 6.1
         }
       ]
@@ -333,40 +334,42 @@ export default {
       caption: 'Il n\'y a pas un chat, je trouve ça suspect',
       paths: [
         {
-          name: 'Kumo',
+          name: 'Retour aux portes de Kumo',
           to: 6
         },
         {
-          name: 'Kumo 2',
+          name: 'Continuer l\'exploration',
           to: 6.2
         }
       ]
     },
     {
       id: 6.2,
-      name: 'Kumo 2',
+      name: 'Place du Village de Kumo',
       caption: 'Je devrais pouvoir traverser le village sans encombres ',
+      img: imagess.dansKumo,
       paths: [
         {
-          name: 'Kumo 1',
+          name: 'Retourner en arrière',
           to: 6.1
         },
         {
-          name: 'Kumo 3',
+          name: 'Restaurant de Ramen',
           to: 6.3
         }
       ]
     },
     {
       id: 6.3,
-      name: 'Kumo 3',
+      name: 'Restaurant',
+      element: images.ramen,
       paths: [
         {
-          name: 'Kumo 2',
+          name: 'Place du villafe',
           to: 6.2
         },
         {
-          name: 'Kumo 4',
+          name: 'Continuer l\'exploration',
           to: 6.4
         }
       ]
@@ -378,7 +381,7 @@ export default {
         'Apparement je n\'ai pas eu de problème, je sens que je m\'approche de Sarutobi!',
       paths: [
         {
-          name: 'Kumo 3',
+          name: 'Retour au restaurant',
           to: 6.3
         },
         {
@@ -406,24 +409,27 @@ export default {
       img: images.foret2,
       paths: [
         {
-          name: 'Forêt de la mort 1',
+          name: 'S\'enfoncer dans la fôret',
           to: 7.2
         }
       ]
     },
     {
       id: 7.2,
-      name: 'Fôret de la mort 1',
+      name: 'Bas fond de la Fôret',
       paths: [
         {
-          name: 'Forêt de la mort 2',
+          name: 'Continuer',
           to: 7.3
         }
       ]
     },
     {
       id: 7.3,
-      name: 'Fôret de la mort 2',
+      name: 'Combat contre Orochimaru',
+      enemy: images.orochimaru,
+      button: 'buttonFight',
+      fightButton: 'Tirer un nombre',
       paths: [
         {
           name: 'Forêt de la mort 3',
@@ -433,7 +439,7 @@ export default {
     },
     {
       id: 7.4,
-      name: 'Fôret de la mort 3',
+      name: 'Sarutobi Retrouvé',
       paths: [
         {
           name: 'Retour à Konoha',
