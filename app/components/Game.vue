@@ -15,7 +15,9 @@
         :key="action.name"
         class="button"
         @click="changePath(action)"
-      >{{ action.name }}</div>
+      >
+{{ action.name }}
+</div>
       <div :class="step.step.button" alt @click="randomHit()">{{ step.step.fightButton }}</div>
     </div>
     <div class="inventory">
@@ -27,7 +29,7 @@
       <img :class=" step.step.class" :src="step.step.blockingElement">
     </div>
     <div>
-      <audio id="player" :src="step.step.music" autoplay></audio>
+      <audio id="player" :src="step.step.music" autoplay/>
       <img class="pause" src="/assets/pictures/pause.svg" alt @click="pause()">
       <img class="play" src="/assets/pictures/play.svg" alt @click="play()">
     </div>
@@ -204,15 +206,15 @@
 }
 </style>
 <script>
-import game from "/assets/data/data.js";
-import getParchemin from "/services/functions";
+import game from '/assets/data/data.js';
+import getParchemin from '/services/functions';
 
 export default {
   data: function() {
     return {
       step: this.getStep(),
-      characterImage: localStorage.getItem("characterImage"),
-      characterClass: localStorage.getItem("characterClass"),
+      characterImage: localStorage.getItem('characterImage'),
+      characterClass: localStorage.getItem('characterClass'),
       inventoryParchemin: game.phases[3].element,
       inventoryParchedeux: game.phases[9].element,
       isActive: false,
@@ -221,15 +223,15 @@ export default {
     };
   },
   watch: {
-    "$route.params.id"(to, from) {
-      const local = localStorage.getItem("parchemin");
+    '$route.params.id'(to, from) {
+      const local = localStorage.getItem('parchemin');
       if (local) {
-        this.step.step.caption = "Allons retrouver ce chemin";
-        localStorage.removeItem("parchemin");
+        this.step.step.caption = 'Allons retrouver ce chemin';
+        localStorage.removeItem('parchemin');
       }
       this.step = this.getStep();
       if (this.step.step.id === 8.1) {
-        this.$router.push({ name: "win" });
+        this.$router.push({ name: 'win' });
       }
     }
   },
@@ -244,7 +246,7 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
-      this.step.step.element = "";
+      this.step.step.element = '';
       if (this.step.step.id === 2.2) {
         this.noFog = true;
         this.isActive = true;
@@ -253,16 +255,16 @@ export default {
         this.isActive2 = true;
       }
       this.step.step.caption =
-        "J'en trouverai surêment d'autres pendant le voyage";
+        'J\'en trouverai surêment d\'autres pendant le voyage';
       game.phases[29].caption =
-        "Je peux enfin passer ! C'est sûrement un raccourci";
+        'Je peux enfin passer ! C\'est sûrement un raccourci';
     },
     changePath(action) {
-      this.$router.push({ name: "game", params: { id: action.to } });
+      this.$router.push({ name: 'game', params: { id: action.to } });
     },
     getImage: function(url) {
       return {
-        "background-image": 'url("' + url + '")'
+        'background-image': 'url("' + url + '")'
       };
     },
     randomHit() {
@@ -275,40 +277,40 @@ export default {
       getRandomInt(6);
       if (this.step.step.id === 2.4) {
         if (you >= enemy) {
-          this.$router.push({ name: "game", params: { id: 2.5 } });
+          this.$router.push({ name: 'game', params: { id: 2.5 } });
         } else {
-          this.$router.push({ name: "loose" });
+          this.$router.push({ name: 'loose' });
         }
       } else if (this.step.step.id === 3.4) {
         if (you >= enemy) {
-          this.$router.push({ name: "game", params: { id: 3.5 } });
+          this.$router.push({ name: 'game', params: { id: 3.5 } });
         } else {
-          this.$router.push({ name: "loose" });
+          this.$router.push({ name: 'loose' });
         }
       } else if (this.step.step.id === 5.3) {
         if (you >= enemy) {
-          this.$router.push({ name: "game", params: { id: 5.4 } });
+          this.$router.push({ name: 'game', params: { id: 5.4 } });
         } else {
-          this.$router.push({ name: "loose" });
+          this.$router.push({ name: 'loose' });
         }
       } else if (this.step.step.id === 7.3) {
         if (you >= enemy) {
-          this.$router.push({ name: "game", params: { id: 7.4 } });
+          this.$router.push({ name: 'game', params: { id: 7.4 } });
         } else {
-          this.$router.push({ name: "loose" });
+          this.$router.push({ name: 'loose' });
         }
       }
     },
     pause() {
-      let but = document.querySelector(".pause");
-      but.addEventListener("click", () => {
-        document.getElementById("player").pause();
+      const but = document.querySelector('.pause');
+      but.addEventListener('click', () => {
+        document.getElementById('player').pause();
       });
     },
     play() {
-      let but = document.querySelector(".play");
-      but.addEventListener("click", () => {
-        document.getElementById("player").play();
+      const but = document.querySelector('.play');
+      but.addEventListener('click', () => {
+        document.getElementById('player').play();
       });
     }
   }

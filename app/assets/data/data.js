@@ -441,6 +441,7 @@ export default {
     {
       id: 7.3,
       name: 'Combat contre Orochimaru',
+      caption: 'Oh un Orochimaru sauvage viens d\'apparaître, battons-nous',
       img: images.foret2,
       enemy: images.orochimaru,
       class: 'orochimaru',
@@ -451,6 +452,7 @@ export default {
     {
       id: 7.4,
       name: 'Sarutobi Retrouvé',
+      caption: 'Bravo, j\'ai retrouvé Sarutobi.',
       enemy: images.sarutobi,
       class: 'sarutobi',
       img: images.foret2,
