@@ -30,6 +30,7 @@
       <audio id="player" :src="step.step.music" autoplay></audio>
       <img class="pause" src="/assets/pictures/pause.svg" alt @click="pause()">
       <img class="play" src="/assets/pictures/play.svg" alt @click="play()">
+      <img class="sound" src="/assets/pictures/sound.svg">
     </div>
   </div>
 </template>
@@ -182,14 +183,21 @@
 .pause {
   position: absolute;
   top: 40px;
-  left: 50px;
+  left: 80px;
   width: 40px;
 }
 .play {
+  display: none;
   position: absolute;
   top: 40px;
-  left: 100px;
+  left: 80px;
   width: 40px;
+}
+.sound {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 45px;
 }
 @keyframes items {
   0% {
@@ -301,9 +309,13 @@ export default {
     },
     pause() {
       document.getElementById("player").pause();
+      document.querySelector(".pause").style.display = "none";
+      document.querySelector(".play").style.display = "block";
     },
     play() {
       document.getElementById("player").play();
+      document.querySelector(".play").style.display = "none";
+      document.querySelector(".pause").style.display = "block";
     }
   }
 };

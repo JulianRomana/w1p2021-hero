@@ -4,6 +4,7 @@
     <div>
       <img class="pause" src="/assets/pictures/pause.svg" alt @click="pause()">
       <img class="play" src="/assets/pictures/play.svg" alt @click="play()">
+      <img class="sound" src="/assets/pictures/sound.svg">
     </div>
     <div class="flex">
       <h1>{{ message }}</h1>
@@ -51,6 +52,26 @@ h1 {
 audio {
   display: none;
 }
+
+.pause {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  width: 40px;
+}
+.play {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  width: 40px;
+}
+.sound {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 45px;
+}
 </style>
 <script>
 import game from "../assets/data/data.js";
@@ -68,9 +89,13 @@ export default {
   methods: {
     pause() {
       document.getElementById("player").pause();
+      document.querySelector(".pause").style.display = "none";
+      document.querySelector(".play").style.display = "block";
     },
     play() {
       document.getElementById("player").play();
+      document.querySelector(".play").style.display = "none";
+      document.querySelector(".pause").style.display = "block";
     }
   }
 };
