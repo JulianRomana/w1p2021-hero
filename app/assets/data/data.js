@@ -1,6 +1,5 @@
 const images = require('../pictures/*.png');
 const imagess = require('../pictures/*.jpg');
-console.log(images);
 export default {
   phases: [
     {
@@ -289,6 +288,7 @@ export default {
     {
       id: 6,
       name: 'Kumo',
+      caption: 'Nous voilà au Village de Kumo, connu pour sa tranquillité',
       paths: [
         {
           name: 'Konoha ( village )',
@@ -303,6 +303,7 @@ export default {
     {
       id: 6.1,
       name: 'Kumo 1',
+      caption: 'Il n\'y a pas un chat',
       paths: [
         {
           name: 'Kumo',
@@ -317,6 +318,7 @@ export default {
     {
       id: 6.2,
       name: 'Kumo 2',
+      caption: 'Je devrais pouvoir traverser le village sans encombres ',
       paths: [
         {
           name: 'Kumo 1',

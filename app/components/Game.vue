@@ -170,9 +170,7 @@ export default {
       }
     }
   },
-  mounted() {
-    console.log(this.step.step.id);
-  },
+  mounted() {},
   methods: {
     getStep() {
       return {
