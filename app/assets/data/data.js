@@ -62,6 +62,7 @@ export default {
       name: 'Ruelle Brumeuse',
       img: images.kiri,
       element: images.Parchedeux,
+      class: 'parchemin',
       caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
@@ -155,6 +156,7 @@ export default {
       name: 'Place du village',
       img: imagess.suna3,
       element: images.Parchemin,
+      class: 'parchemin',
       caption: 'Un parchemin de chance ! Parfait pour les combats. J\'ai ce qu\'il me faut. Retournons à Konoha',
       paths: [
         {
@@ -357,7 +359,9 @@ export default {
       id: 6.3,
       name: 'Restaurant',
       element: images.ramen,
+      class: 'ramen',
       img: imagess.restaurant,
+      caption: 'Enfin un peu de repos, je vais pouvoir manger',
       paths: [
         {
           name: 'Place du villafe',
@@ -373,6 +377,7 @@ export default {
       id: 6.4,
       name: 'Kumo 4',
       caption: 'Apparement je n\'ai pas eu de problème, je sens que je m\'approche de Sarutobi!',
+      img: imagess.dansKumo,
       paths: [
         {
           name: 'Entrée de la forêt de la mort',
@@ -383,9 +388,8 @@ export default {
     {
       id: 7,
       music: musique.sarutobi,
-      name: 'Entrée de la forêt de la mort',
+      name: 'Entrer dans la forêt de la mort',
       img: imagess.foret1,
-
       paths: [
         {
           name: 'Forêt de la mort',
@@ -396,7 +400,7 @@ export default {
     {
       id: 7.1,
       name: 'Fôret de la mort',
-      img: images.foret2,
+      img: imagess.foret1,
       paths: [
         {
           name: 'S\'enfoncer dans la fôret',
@@ -407,6 +411,7 @@ export default {
     {
       id: 7.2,
       name: 'Bas fond de la Fôret',
+      img: images.foret2,
       paths: [
         {
           name: 'Continuer',
@@ -417,12 +422,14 @@ export default {
     {
       id: 7.3,
       name: 'Combat contre Orochimaru',
+      img: images.foret2,
       enemy: images.orochimaru,
+      class: 'orochimaru',
       button: 'buttonFight',
       fightButton: 'Tirer un nombre',
       paths: [
         {
-          name: 'Forêt de la mort 3',
+          name: 'Continuer',
           to: 7.4
         }
       ]
@@ -430,18 +437,23 @@ export default {
     {
       id: 7.4,
       name: 'Sarutobi Retrouvé',
+      enemy: images.sarutobi,
+      class: 'sarutobi',
+      img: images.foret2,
       paths: [
         {
-          name: 'Retour à Konoha',
-          to: 4
+          name: 'Continuer',
+          to: 8.1
         }
       ]
     },
     {
       id: 8,
       name: 'Kiri Brume',
-      caption: 'Nous trouverons peut-être une technique secrète pendant notre voyage, afin de faire disparaître la brume.',
-      blockingElement: images.fog,
+      caption: 'Je ne peux pas passer par là, peut-être qu\'il y a un parchemin qui pourrait m\'aider',
+      blockingElement: images.fog2,
+      img: images.kiri,
+      class: 'fog',
       paths: [
         {
           name: 'Portes de Kiri',

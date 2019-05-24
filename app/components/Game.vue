@@ -7,7 +7,7 @@
       </div>
       <img :class="characterClass" :src="characterImage" alt>
     </div>
-    <img class="parchemin" :src="step.step.element" alt @click="takeParchemin()">
+    <img :class="step.step.class" :src="step.step.element" alt @click="takeParchemin()">
     <img :class="step.step.class" :src="step.step.enemy">
     <div class="containerButton">
       <div
@@ -25,8 +25,8 @@
       <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
       <img class="is-hidden" :class=" {active2: isActive2}" :src="inventoryParchedeux" alt>
     </div>
-    <div class="fog" :class="{noFog: noFog }">
-      <img :src="step.step.blockingElement">
+    <div :class="{noFog: noFog}">
+      <img :class=" step.step.class" :src="step.step.blockingElement">
     </div>
     <audio :src="step.step.music" autoplay />
   </div>
@@ -78,9 +78,12 @@
 .parchemin {
   position: absolute;
   top: 180px;
-  right: 20%;
+  right: 30%;
   width: 60px;
   transform: scaleX(-1);
+  cursor: pointer;
+  transition: 0.4s;
+  animation: items 1s linear infinite;
 }
 .hoodedman {
   position: absolute;
@@ -146,11 +149,44 @@
 }
 
 .fog {
-  width: 100vw;
-  height: 100vw;
+  position: relative;
+  top: -10vh;
+  z-index: 2;
+  background-color: rgba(60, 60, 60, 0.632);
 }
 .noFog {
   display: none;
+}
+.ramen {
+  width: 400px;
+  position: absolute;
+  top: 180px;
+  right: 20%;
+  transition: 0.4s;
+  animation: items 1s linear infinite;
+}
+.orochimaru {
+  position: absolute;
+  top: 130px;
+  right: 18%;
+  width: 400px;
+}
+.sarutobi {
+  position: absolute;
+  top: 130px;
+  right: 18%;
+  width: 300px;
+}
+@keyframes items {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>
 <script>
@@ -178,6 +214,9 @@ export default {
         localStorage.removeItem('parchemin');
       }
       this.step = this.getStep();
+      if (this.step.step.id === 8.1) {
+        this.$router.push({ name: 'win' });
+      }
     }
   },
   mounted() {},
@@ -199,6 +238,10 @@ export default {
       if (this.step.step.id === 3.2) {
         this.isActive2 = true;
       }
+      this.step.step.caption =
+        'J\'en trouverai surêment d\'autres pendant le voyage';
+      game.phases[29].caption =
+        'Je peux enfin passer ! C\'est sûrement un raccourci';
     },
     changePath(action) {
       this.$router.push({ name: 'game', params: { id: action.to } });
@@ -236,7 +279,7 @@ export default {
         }
       } else if (this.step.step.id === 7.3) {
         if (you >= enemy) {
-          this.$router.push({ name: 'win' });
+          this.$router.push({ name: 'game', params: { id: 7.4 } });
         } else {
           this.$router.push({ name: 'loose' });
         }
