@@ -415,7 +415,7 @@ export default {
       name: 'Fôret de la mort',
       img: images.foret2,
       caption:
-        'Nous voilà dans la fôret de la mort.. Je me souviens de mon examen de chunin.',
+        'Cet endroit me met mal à l\'aise, je me souviens de ce que Orochimaru a fait..',
       paths: [
         {
           name: 'S\'enfoncer dans la fôret',
@@ -426,6 +426,7 @@ export default {
     {
       id: 7.2,
       name: 'Bas fond de la Fôret',
+      caption: 'Que fait sakura en ce moment ?!',
       img: images.foret2,
       paths: [
         {
