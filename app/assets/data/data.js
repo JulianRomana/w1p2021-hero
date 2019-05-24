@@ -213,6 +213,8 @@ export default {
       id: 4,
       name: 'Village de Konoha',
       img: images.konoha,
+      caption:
+        'Me revoilà à konaha! toutes les informations que j\'ai recoltés me mène vers ces deux villages',
       paths: [
         {
           name: 'Retour au village de Suna',
