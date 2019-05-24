@@ -8,7 +8,8 @@ export default {
       name: 'Konoha',
       img: images.portedekonoha,
       music: musique.konoha,
-      caption: 'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
+      caption:
+        'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
       paths: [
         {
           name: 'Portes de Kiri',
@@ -25,7 +26,8 @@ export default {
       name: 'Portes de Kiri',
       img: images.kiri,
       music: musique.sarutobi,
-      caption: 'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
+      caption:
+        'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
       paths: [
         {
           name: 'Retour à Konoha',
@@ -62,7 +64,8 @@ export default {
       name: 'Ruelle Brumeuse',
       img: images.kiri,
       element: images.Parchedeux,
-      caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
+      caption:
+        'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
           name: 'Rues de Kiri',
@@ -98,7 +101,8 @@ export default {
       name: 'Zabuza',
       img: images.kiri,
       music: musique.narutofight,
-      caption: 'Zabuza est un grand Ninja du village de Kiri, je suis obligé de le combattre!',
+      caption:
+        'Zabuza est un grand Ninja du village de Kiri, je suis obligé de le combattre!',
       enemy: images.zabuza,
       button: 'buttonFight',
       fightButton: 'Tirer un nombre',
@@ -109,7 +113,8 @@ export default {
       id: 2.5,
       name: 'Victoire contre Zabuza',
       img: images.kiri,
-      caption: 'J\'ai réussi à vaincre Zabuza ! retournons à Konoha pour un débrief',
+      caption:
+        'J\'ai réussi à vaincre Zabuza ! retournons à Konoha pour un débrief',
       paths: [
         {
           name: 'Retour à Konoha',
@@ -122,7 +127,8 @@ export default {
       name: 'Portes de Suna',
       img: images.suna,
       music: musique.gogo,
-      caption: 'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
+      caption:
+        'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
       paths: [
         {
           name: 'Village de Konoha',
@@ -138,7 +144,8 @@ export default {
       id: 3.1,
       name: 'Rues de Suna',
       img: images.suna2,
-      caption: 'Je ne vois pas grand chose avec tout ce sable dans les airs, il faut que je trouve un moyen de me protéger.',
+      caption:
+        'Je ne vois pas grand chose avec tout ce sable dans les airs, il faut que je trouve un moyen de me protéger.',
       paths: [
         {
           name: 'Portes de Suna',
@@ -155,7 +162,8 @@ export default {
       name: 'Place du village',
       img: imagess.suna3,
       element: images.Parchemin,
-      caption: 'Un parchemin de chance ! Parfait pour les combats. J\'ai ce qu\'il me faut. Retournons à Konoha',
+      caption:
+        'Un parchemin de chance ! Parfait pour les combats. J\'ai ce qu\'il me faut. Retournons à Konoha',
       paths: [
         {
           name: 'Rues de Suna',
@@ -191,14 +199,16 @@ export default {
       class: 'sasori',
       button: 'buttonFight',
       fightButton: 'Tirer un nombre',
-      caption: 'Il va falloir que je le combatte, heuresement le parchemin que j\'ai récupéré va m\'aider',
+      caption:
+        'Il va falloir que je le combatte, heuresement le parchemin que j\'ai récupéré va m\'aider',
       paths: []
     },
     {
       id: 3.5,
       name: 'Sasori vaincu',
       img: images.suna,
-      caption: 'J\'ai réussi à le vaincre ! Je vais pouvoir retourner à Konoha pour un débrief',
+      caption:
+        'J\'ai réussi à le vaincre ! Je vais pouvoir retourner à Konoha pour un débrief',
       paths: [
         {
           name: 'Retour au village de Konoha',
@@ -211,7 +221,8 @@ export default {
       name: 'Village de Konoha',
       img: images.konoha,
       music: musique.konoha,
-      caption: 'Me revoilà à konaha! toutes les informations que j\'ai recoltés me mène vers ces deux villages',
+      caption:
+        'Me revoilà à konaha! toutes les informations que j\'ai recoltés me mène vers ces deux villages',
       paths: [
         {
           name: 'Retour au village de Suna',
@@ -287,7 +298,8 @@ export default {
       enemy: images.pain,
       img: imagess.arrivePain,
       class: 'pain',
-      caption: 'Encore un combat ! Heuresement que j\'ai récupéré le parchemin à Suna il augmentera mes chances ',
+      caption:
+        'Encore un combat ! Heuresement que j\'ai récupéré le parchemin à Suna il augmentera mes chances ',
       fightButton: 'Tirer un nombre',
       button: 'buttonFight',
       paths: []
@@ -296,7 +308,8 @@ export default {
       id: 5.4,
       name: 'Victoire contre Pain',
       img: images.villageAme,
-      caption: 'J\'ai enfin tout ce qu\'il me faut, je sens que la fin est proche',
+      caption:
+        'J\'ai enfin tout ce qu\'il me faut, je sens que la fin est proche',
       paths: [
         {
           name: 'Entrée de la forêt de la mort',
@@ -357,6 +370,7 @@ export default {
       id: 6.3,
       name: 'Restaurant',
       element: images.ramen,
+      caption: 'Je vais m\'arrêter ici pour manger un bon bol de ramen !',
       img: imagess.restaurant,
       paths: [
         {
@@ -372,7 +386,8 @@ export default {
     {
       id: 6.4,
       name: 'Kumo 4',
-      caption: 'Apparement je n\'ai pas eu de problème, je sens que je m\'approche de Sarutobi!',
+      caption:
+        'Apparement je n\'ai pas eu de problème, je sens que je m\'approche de Sarutobi!',
       paths: [
         {
           name: 'Entrée de la forêt de la mort',
@@ -384,6 +399,8 @@ export default {
       id: 7,
       music: musique.sarutobi,
       name: 'Entrée de la forêt de la mort',
+      caption:
+        'Nous voilà dans la fôret de la mort.. Je me souviens de mon examen de chunin.',
       img: imagess.foret1,
 
       paths: [
@@ -397,6 +414,8 @@ export default {
       id: 7.1,
       name: 'Fôret de la mort',
       img: images.foret2,
+      caption:
+        'Nous voilà dans la fôret de la mort.. Je me souviens de mon examen de chunin.',
       paths: [
         {
           name: 'S\'enfoncer dans la fôret',
@@ -440,7 +459,8 @@ export default {
     {
       id: 8,
       name: 'Kiri Brume',
-      caption: 'Nous trouverons peut-être une technique secrète pendant notre voyage, afin de faire disparaître la brume.',
+      caption:
+        'Nous trouverons peut-être une technique secrète pendant notre voyage, afin de faire disparaître la brume.',
       blockingElement: images.fog,
       paths: [
         {
