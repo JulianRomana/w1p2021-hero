@@ -150,7 +150,7 @@
 
 .fog {
   position: relative;
-  top: -10vh;
+  top: -8.9vh;
   z-index: 2;
   background-color: rgba(60, 60, 60, 0.632);
 }
