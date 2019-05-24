@@ -1,13 +1,13 @@
 const images = require('../pictures/*.png');
 const imagess = require('../pictures/*.jpg');
-console.log(images);
 export default {
   phases: [
     {
       id: 1,
       name: 'Konoha',
       img: images.portedekonoha,
-      caption: 'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
+      caption:
+        'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
       paths: [
         {
           name: 'Portes de Kiri',
@@ -23,7 +23,8 @@ export default {
       id: 2,
       name: 'Portes de Kiri',
       img: images.kiri,
-      caption: 'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
+      caption:
+        'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
       paths: [
         {
           name: 'Retour à Konoha',
@@ -43,6 +44,7 @@ export default {
       id: 2.1,
       name: 'Rues de kiri',
       img: images.kiri,
+      caption: 'Il n\'y a pas grand chose ici, je devrais sûrement avancer ',
       paths: [
         {
           name: 'Retour aux portes de Kiri',
@@ -59,7 +61,8 @@ export default {
       name: 'Ruelle Brumeuse',
       img: images.kiri,
       element: images.Parchemin,
-      caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
+      caption:
+        'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
           name: 'Rues de Kiri',
@@ -94,7 +97,8 @@ export default {
       id: 2.4,
       name: 'Zabuza',
       img: images.kiri,
-      caption: 'Zabuza est un grand Ninja du village de Kiri, lance les dés afin de tanter de la battre!',
+      caption:
+        'Zabuza est un grand Ninja du village de Kiri, je suis obligé de le combattre!',
       enemy: images.zabuza,
       button: 'buttonFight',
       fightButton: 'Tirer un nombre',
@@ -105,7 +109,8 @@ export default {
       id: 2.5,
       name: 'Victoire contre Zabuza',
       img: images.kiri,
-      caption: 'J\'ai réussi à vaincre Zabuza ! retournons à Konoha pour un débrief',
+      caption:
+        'J\'ai réussi à vaincre Zabuza ! retournons à Konoha pour un débrief',
       paths: [
         {
           name: 'Retour à Konoha',
@@ -117,7 +122,8 @@ export default {
       id: 3,
       name: 'Portes de Suna',
       img: images.suna,
-      caption: 'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
+      caption:
+        'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
       paths: [
         {
           name: 'Village de Konoha',
@@ -133,7 +139,8 @@ export default {
       id: 3.1,
       name: 'Rues de Suna',
       img: images.suna2,
-      caption: 'Je ne vois pas grand chose avec tout ce sable dans les airs, il faut que je trouve un moyen de me protéger.',
+      caption:
+        'Je ne vois pas grand chose avec tout ce sable dans les airs, il faut que je trouve un moyen de me protéger.',
       paths: [
         {
           name: 'Portes de Suna',
@@ -150,7 +157,8 @@ export default {
       name: 'Place du village',
       img: imagess.suna3,
       element: images.Parchemin,
-      caption: 'Un parchemin de chance ! Parfait pour les combats. J\'ai ce qu\'il me faut. Retournons à Konoha',
+      caption:
+        'Un parchemin de chance ! Parfait pour les combats. J\'ai ce qu\'il me faut. Retournons à Konoha',
       paths: [
         {
           name: 'Rues de Suna',
@@ -167,6 +175,7 @@ export default {
       name: 'Attaque surprise de Sasori !',
       img: images.suna,
       enemy: images.sasori,
+      class: 'sasori',
       caption: 'Maudit Sasori, il m\'a prit par surprise',
       paths: [
         {
@@ -177,14 +186,28 @@ export default {
     },
     {
       id: 3.4,
-      name: 'Suna 4',
+      name: 'Combat contre Sasori',
       img: images.suna,
       enemy: images.sasori,
       class: 'sasori',
       button: 'buttonFight',
       fightButton: 'Tirer un nombre',
-      caption: 'Konoha est juste devant, je vais pouvoir débrief avec le Hokage ',
+      caption:
+        'Il va falloir que je le combatte, heuresement le parchemin que j\'ai récupéré va m\'aider',
       paths: []
+    },
+    {
+      id: 3.5,
+      name: 'Sasori vaincu',
+      img: images.suna,
+      caption:
+        'J\'ai réussi à le vaincre ! Je vais pouvoir retourner à Konoha pour un débrief',
+      paths: [
+        {
+          name: 'Retour au village de Konoha',
+          to: 4
+        }
+      ]
     },
     {
       id: 4,
@@ -256,7 +279,8 @@ export default {
       id: 5.3,
       name: 'Pain, le chef du village',
       enemy: images.pain,
-      caption: 'Encore un combat ! Heuresement que j\'ai récupéré le parchemin à Suna il augmentera mes chances ',
+      caption:
+        'Encore un combat ! Heuresement que j\'ai récupéré le parchemin à Suna il augmentera mes chances ',
       fightButton: 'Tirer un nombre',
       button: 'buttonFight',
       paths: []
@@ -264,7 +288,8 @@ export default {
     {
       id: 5.4,
       name: 'Victoire contre Pain',
-      caption: 'J\'ai enfin tout ce qu\'il me faut, je sens que la fin est proche',
+      caption:
+        'J\'ai enfin tout ce qu\'il me faut, je sens que la fin est proche',
       paths: [
         {
           name: 'Entrée de la forêt de la mort',
@@ -275,6 +300,7 @@ export default {
     {
       id: 6,
       name: 'Kumo',
+      caption: 'Nous voilà au Village de Kumo, connu pour sa tranquillité',
       paths: [
         {
           name: 'Konoha ( village )',
@@ -289,6 +315,7 @@ export default {
     {
       id: 6.1,
       name: 'Kumo 1',
+      caption: 'Il n\'y a pas un chat',
       paths: [
         {
           name: 'Kumo',
@@ -303,6 +330,7 @@ export default {
     {
       id: 6.2,
       name: 'Kumo 2',
+      caption: 'Je devrais pouvoir traverser le village sans encombres ',
       paths: [
         {
           name: 'Kumo 1',
@@ -345,6 +373,8 @@ export default {
     {
       id: 7,
       name: 'Entrée de la forêt de la mort',
+      img: imagess.foret1,
+
       paths: [
         {
           name: 'Forêt de la mort',
@@ -355,6 +385,7 @@ export default {
     {
       id: 7.1,
       name: 'Fôret de la mort',
+      img: images.foret2,
       paths: [
         {
           name: 'Entrée de la forêt de la mort',
@@ -411,7 +442,9 @@ export default {
     {
       id: 8,
       name: 'Kiri Brume',
-      caption: 'Nous trouverons peut-être une technique secrète pendant notre voyage, afin de faire disparaître la brume.',
+      caption:
+        'Nous trouverons peut-être une technique secrète pendant notre voyage, afin de faire disparaître la brume.',
+      blockingElement: images.fog,
       paths: [
         {
           name: 'Portes de Kiri',

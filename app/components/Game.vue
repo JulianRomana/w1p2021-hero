@@ -24,6 +24,9 @@
       <h2>Inventaire</h2>
       <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
     </div>
+    <div class="fog" :class="{noFog: noFog }">
+      <img :src="step.step.blockingElement">
+    </div>
   </div>
 </template>
 
@@ -130,6 +133,14 @@
   transform: scale(1.1);
   transition: 0.2s;
 }
+
+.fog {
+  width: 100vw;
+  height: 100vw;
+}
+.noFog {
+  display: none;
+}
 </style>
 <script>
 import game from '/assets/data/data.js';
@@ -141,8 +152,9 @@ export default {
       step: this.getStep(),
       characterImage: localStorage.getItem('characterImage'),
       characterClass: localStorage.getItem('characterClass'),
-      inventoryParchemin: localStorage.getItem('inventoryParchemin'),
-      isActive: false
+      inventoryParchemin: game.phases[3].element,
+      isActive: false,
+      noFog: false
     };
   },
   watch: {
@@ -152,17 +164,13 @@ export default {
         this.step.step.caption = 'Allons retrouver ce chemin';
         localStorage.removeItem('parchemin');
       }
-      if (localStorage.getItem('path')) {
-      }
       this.step = this.getStep();
       if (this.step.step.id === 7.4) {
         this.$router.push({ path: '/win' });
       }
     }
   },
-  mounted() {
-    console.log(this.step.step.id);
-  },
+  mounted() {},
   methods: {
     getStep() {
       return {
@@ -173,9 +181,11 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
-      localStorage.setItem('inventoryParchemin', game.phases[3].element);
       this.step.step.element = '';
       this.isActive = true;
+      if (this.step.step.id === 2.2) {
+        this.noFog = true;
+      }
     },
     changePath(action) {
       this.$router.push({ name: 'game', params: { id: action.to } });
@@ -201,7 +211,7 @@ export default {
         }
       } else if (this.step.step.id === 3.4) {
         if (you >= enemy) {
-          this.$router.push({ name: 'game', params: { id: 4 } });
+          this.$router.push({ name: 'game', params: { id: 3.5 } });
         } else {
           this.$router.push({ name: 'loose' });
         }

@@ -1,12 +1,13 @@
 <template>
   <div class="screen">
+    <link rel="preload" as="image" :href="homepageImage">
     <div class="flex">
       <h1>{{ message }}</h1>
       <br>
-      <img class="rouleau" src="../assets/pictures/rouleau.png">
+      <img class="rouleau" :src="instructions">
       <router-link class="button" to="/characters">Jouer</router-link>
     </div>
-    <img class="shika" src="../assets/pictures/shikamaru.png">
+    <img class="shika" :src="shikamaru">
     <div>
       <audio controls preload="auto" autoplay>
         <source src="../assets/musics/badSituation.mp3">
@@ -49,14 +50,17 @@ audio {
 </style>
 <script>
 import game from '../assets/data/data.js';
-
+const homepageImage = require('../assets/pictures/*.png');
 export default {
   data() {
     return {
       message: 'Aidez naruto à retrouvez Sarutobi',
-      game: game
+      game: game,
+      instructions: homepageImage.rouleau,
+      shikamaru: homepageImage.Shikamaru,
+      homepageImage: homepageImage
     };
   },
-  methods: {}
+  mounted() {}
 };
 </script>
