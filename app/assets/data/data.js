@@ -61,7 +61,7 @@ export default {
       id: 2.2,
       name: 'Ruelle Brumeuse',
       img: images.kiri,
-      element: images.Parchemin,
+      element: images.Parchedeux,
       caption: 'Un parchemin de la brume, il pourrait peut être me permettre de dévoiler un chemin ',
       paths: [
         {
@@ -285,6 +285,8 @@ export default {
       music: musique.narutofight,
       name: 'Pain, le chef du village',
       enemy: images.pain,
+      img: imagess.arrivePain,
+      class: 'pain',
       caption: 'Encore un combat ! Heuresement que j\'ai récupéré le parchemin à Suna il augmentera mes chances ',
       fightButton: 'Tirer un nombre',
       button: 'buttonFight',
@@ -293,6 +295,7 @@ export default {
     {
       id: 5.4,
       name: 'Victoire contre Pain',
+      img: images.villageAme,
       caption: 'J\'ai enfin tout ce qu\'il me faut, je sens que la fin est proche',
       paths: [
         {
@@ -304,7 +307,7 @@ export default {
     {
       id: 6,
       music: musique.enjaille,
-      name: 'Kumo',
+      name: 'Portes de Kumo',
       caption: 'Nous voilà au Village de Kumo, connu pour sa tranquillité',
       img: images.villageKumo,
       paths: [
@@ -320,7 +323,8 @@ export default {
     },
     {
       id: 6.1,
-      name: 'Kumo 1',
+      name: 'Kumo',
+      img: imagess.dansKumo,
       caption: 'Il n\'y a pas un chat, je trouve ça suspect',
       paths: [
         {
@@ -353,6 +357,7 @@ export default {
       id: 6.3,
       name: 'Restaurant',
       element: images.ramen,
+      img: imagess.restaurant,
       paths: [
         {
           name: 'Place du villafe',
@@ -369,10 +374,6 @@ export default {
       name: 'Kumo 4',
       caption: 'Apparement je n\'ai pas eu de problème, je sens que je m\'approche de Sarutobi!',
       paths: [
-        {
-          name: 'Retour au restaurant',
-          to: 6.3
-        },
         {
           name: 'Entrée de la forêt de la mort',
           to: 7

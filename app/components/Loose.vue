@@ -1,9 +1,8 @@
 <template>
   <div class="screen">
-    <h1>{{ message }}</h1>
     <br>
     <router-link class="buttonlose" to="/">Recommencer</router-link>
-    <audio src="/assets/musics/triste.mp3" autoplay></audio>
+    <audio src="/assets/musics/triste.mp3" autoplay />
   </div>
 </template>
 
@@ -17,7 +16,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .screen {
   background-image: url("/assets/pictures/losescreen.png");
   background-size: cover;

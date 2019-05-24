@@ -15,17 +15,20 @@
         :key="action.name"
         class="button"
         @click="changePath(action)"
-      >{{ action.name }}</div>
+      >
+{{ action.name }}
+</div>
       <div :class="step.step.button" alt @click="randomHit()">{{ step.step.fightButton }}</div>
     </div>
     <div class="inventory">
       <h2>Inventaire</h2>
       <img class="is-hidden" :class=" {active: isActive}" :src="inventoryParchemin" alt>
+      <img class="is-hidden" :class=" {active2: isActive2}" :src="inventoryParchedeux" alt>
     </div>
     <div class="fog" :class="{noFog: noFog }">
       <img :src="step.step.blockingElement">
     </div>
-    <audio :src="step.step.music" autoplay></audio>
+    <audio :src="step.step.music" autoplay />
   </div>
 </template>
 
@@ -76,7 +79,7 @@
   position: absolute;
   top: 180px;
   right: 20%;
-  width: 250px;
+  width: 60px;
   transform: scaleX(-1);
 }
 .hoodedman {
@@ -99,6 +102,12 @@
   right: 25%;
   width: 350px;
 }
+.pain {
+  position: absolute;
+  top: 130px;
+  right: 18%;
+  width: 300px;
+}
 .naruto_character {
   width: 300px;
 }
@@ -111,10 +120,13 @@
   right: 5%;
 }
 .is-hidden {
-  width: 80px;
+  width: 50px;
   opacity: 0;
 }
 .active {
+  opacity: 1;
+}
+.active2 {
   opacity: 1;
 }
 .buttonFight {
@@ -142,26 +154,28 @@
 }
 </style>
 <script>
-import game from "/assets/data/data.js";
-import getParchemin from "/services/functions";
+import game from '/assets/data/data.js';
+import getParchemin from '/services/functions';
 
 export default {
   data: function() {
     return {
       step: this.getStep(),
-      characterImage: localStorage.getItem("characterImage"),
-      characterClass: localStorage.getItem("characterClass"),
+      characterImage: localStorage.getItem('characterImage'),
+      characterClass: localStorage.getItem('characterClass'),
       inventoryParchemin: game.phases[3].element,
+      inventoryParchedeux: game.phases[9].element,
       isActive: false,
-      noFog: false
+      noFog: false,
+      isActive2: false
     };
   },
   watch: {
-    "$route.params.id"(to, from) {
-      const local = localStorage.getItem("parchemin");
+    '$route.params.id'(to, from) {
+      const local = localStorage.getItem('parchemin');
       if (local) {
-        this.step.step.caption = "Allons retrouver ce chemin";
-        localStorage.removeItem("parchemin");
+        this.step.step.caption = 'Allons retrouver ce chemin';
+        localStorage.removeItem('parchemin');
       }
       this.step = this.getStep();
     }
@@ -177,18 +191,21 @@ export default {
     },
     takeParchemin() {
       getParchemin.took();
-      this.step.step.element = "";
-      this.isActive = true;
+      this.step.step.element = '';
       if (this.step.step.id === 2.2) {
         this.noFog = true;
+        this.isActive = true;
+      }
+      if (this.step.step.id === 3.2) {
+        this.isActive2 = true;
       }
     },
     changePath(action) {
-      this.$router.push({ name: "game", params: { id: action.to } });
+      this.$router.push({ name: 'game', params: { id: action.to } });
     },
     getImage: function(url) {
       return {
-        "background-image": 'url("' + url + '")'
+        'background-image': 'url("' + url + '")'
       };
     },
     randomHit() {
@@ -201,27 +218,27 @@ export default {
       getRandomInt(6);
       if (this.step.step.id === 2.4) {
         if (you >= enemy) {
-          this.$router.push({ name: "game", params: { id: 2.5 } });
+          this.$router.push({ name: 'game', params: { id: 2.5 } });
         } else {
-          this.$router.push({ name: "loose" });
+          this.$router.push({ name: 'loose' });
         }
       } else if (this.step.step.id === 3.4) {
         if (you >= enemy) {
-          this.$router.push({ name: "game", params: { id: 3.5 } });
+          this.$router.push({ name: 'game', params: { id: 3.5 } });
         } else {
-          this.$router.push({ name: "loose" });
+          this.$router.push({ name: 'loose' });
         }
       } else if (this.step.step.id === 5.3) {
         if (you >= enemy) {
-          this.$router.push({ name: "game", params: { id: 5.4 } });
+          this.$router.push({ name: 'game', params: { id: 5.4 } });
         } else {
-          this.$router.push({ name: "loose" });
+          this.$router.push({ name: 'loose' });
         }
       } else if (this.step.step.id === 7.3) {
         if (you >= enemy) {
-          this.$router.push({ name: "game", params: { id: 7.4 } });
+          this.$router.push({ name: 'win' });
         } else {
-          this.$router.push({ name: "loose" });
+          this.$router.push({ name: 'loose' });
         }
       }
     }
