@@ -1,8 +1,12 @@
 <template>
   <div class="screen">
     <br>
+    <div class="score">
+      <h2>L'ennemie a tiré le chiffre {{ enemyNumber }}</h2>
+      <h2>Et moi le {{ yourNumber }}</h2>
+    </div>
     <router-link class="buttonlose" to="/">Recommencer</router-link>
-    <audio src="/assets/musics/triste.mp3" autoplay />
+    <audio src="/assets/musics/triste.mp3" autoplay/>
   </div>
 </template>
 
@@ -10,7 +14,9 @@
 export default {
   data() {
     return {
-      message: `t'es mort`
+      message: `t'es mort`,
+      yourNumber: localStorage.getItem("myNumber"),
+      enemyNumber: localStorage.getItem("enemyNumber")
     };
   }
 };
@@ -32,5 +38,9 @@ export default {
   border-radius: 5px;
   font-size: 30px;
   cursor: pointer;
+}
+h2 {
+  color: white;
+  font-size: 30px;
 }
 </style>
