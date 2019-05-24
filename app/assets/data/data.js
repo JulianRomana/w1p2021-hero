@@ -372,6 +372,7 @@ export default {
       element: images.ramen,
       caption: 'Je vais m\'arrêter ici pour manger un bon bol de ramen !',
       img: imagess.restaurant,
+      caption: 'Enfin un peu de repos, je vais pouvoir manger',
       paths: [
         {
           name: 'Place du villafe',
@@ -402,7 +403,6 @@ export default {
       caption:
         'Nous voilà dans la fôret de la mort.. Je me souviens de mon examen de chunin.',
       img: imagess.foret1,
-
       paths: [
         {
           name: 'Forêt de la mort',
@@ -426,6 +426,7 @@ export default {
     {
       id: 7.2,
       name: 'Bas fond de la Fôret',
+      img: images.foret2,
       paths: [
         {
           name: 'Continuer',
@@ -436,12 +437,14 @@ export default {
     {
       id: 7.3,
       name: 'Combat contre Orochimaru',
+      img: images.foret2,
       enemy: images.orochimaru,
+      class: 'orochimaru',
       button: 'buttonFight',
       fightButton: 'Tirer un nombre',
       paths: [
         {
-          name: 'Forêt de la mort 3',
+          name: 'Continuer',
           to: 7.4
         }
       ]
@@ -449,10 +452,13 @@ export default {
     {
       id: 7.4,
       name: 'Sarutobi Retrouvé',
+      enemy: images.sarutobi,
+      class: 'sarutobi',
+      img: images.foret2,
       paths: [
         {
-          name: 'Retour à Konoha',
-          to: 4
+          name: 'Continuer',
+          to: 8.1
         }
       ]
     },
