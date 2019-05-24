@@ -1,6 +1,6 @@
 # Le site dont vous êtes le héros
 
-URL du site : https://trouvezlehokage.netlify.com
+URL du site : https://trouvezsarutobi.netlify.com/
 
 ### Groupe
 
