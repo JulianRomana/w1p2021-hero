@@ -237,6 +237,7 @@ export default {
     {
       id: 5,
       name: 'Portes de Ame',
+      caption: 'Nous voilà au portes du village de la pluie',
       paths: [
         {
           name: 'Retour à Konoha',
@@ -251,6 +252,7 @@ export default {
     {
       id: 5.1,
       name: 'Village de Ame',
+      caption: 'L\'hostilité de ce village me laisse perplexe  ',
       paths: [
         {
           name: 'Portes de Ame',
@@ -390,10 +392,6 @@ export default {
       img: images.foret2,
       paths: [
         {
-          name: 'Entrée de la forêt de la mort',
-          to: 7
-        },
-        {
           name: 'Forêt de la mort 1',
           to: 7.2
         }
@@ -403,10 +401,6 @@ export default {
       id: 7.2,
       name: 'Fôret de la mort 1',
       paths: [
-        {
-          name: 'Fôret de la mort',
-          to: 7.1
-        },
         {
           name: 'Forêt de la mort 2',
           to: 7.3
@@ -418,10 +412,6 @@ export default {
       name: 'Fôret de la mort 2',
       paths: [
         {
-          name: 'Fôret de la mort 1',
-          to: 7.2
-        },
-        {
           name: 'Forêt de la mort 3',
           to: 7.4
         }
@@ -431,10 +421,6 @@ export default {
       id: 7.4,
       name: 'Fôret de la mort 3',
       paths: [
-        {
-          name: 'Fôret de la mort 2',
-          to: 7.3
-        },
         {
           name: 'Retour à Konoha',
           to: 4
