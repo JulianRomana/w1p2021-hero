@@ -164,12 +164,6 @@ export default {
         localStorage.removeItem("parchemin");
       }
       this.step = this.getStep();
-<<<<<<< HEAD
-      if (this.step.step.id === 7.4) {
-        this.$router.push({ path: "/win" });
-      }
-=======
->>>>>>> 187c87b4116baef87dad2195b3b347ad5c507cd1
     }
   },
   mounted() {},
@@ -225,9 +219,9 @@ export default {
         }
       } else if (this.step.step.id === 7.3) {
         if (you >= enemy) {
-          this.$router.push({ name: 'game', params: { id: 7.4 } });
+          this.$router.push({ name: "game", params: { id: 7.4 } });
         } else {
-          this.$router.push({ name: 'loose' });
+          this.$router.push({ name: "loose" });
         }
       }
     }

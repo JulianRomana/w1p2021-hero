@@ -3,6 +3,7 @@
     <h1>{{ message }}</h1>
     <br>
     <router-link class="buttonlose" to="/">Recommencer</router-link>
+    <audio src="/assets/musics/triste.mp3" autoplay></audio>
   </div>
 </template>
 
