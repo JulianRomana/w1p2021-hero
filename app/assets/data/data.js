@@ -401,14 +401,8 @@ export default {
     {
       id: 7.1,
       name: 'Fôret de la mort',
-<<<<<<< HEAD
       img: images.foret2,
-      caption:
-        'Cet endroit me met mal à l\'aise, je me souviens de ce que Orochimaru a fait..',
-=======
-      img: imagess.foret1,
-      caption: 'Nous voilà dans la fôret de la mort.. Je me souviens de mon examen de chunin.',
->>>>>>> f77cfcc43a443aedb460e7741725b36f64633458
+      caption: 'Cet endroit me met mal à l\'aise, je me souviens de ce que Orochimaru a fait..',
       paths: [
         {
           name: 'S\'enfoncer dans la fôret',
@@ -431,6 +425,7 @@ export default {
     {
       id: 7.3,
       name: 'Combat contre Orochimaru',
+      caption: 'Oh un Orochimaru sauvage viens d\'apparaître, battons-nous',
       img: images.foret2,
       enemy: images.orochimaru,
       class: 'orochimaru',
@@ -441,6 +436,7 @@ export default {
     {
       id: 7.4,
       name: 'Sarutobi Retrouvé',
+      caption: 'Bravo, j\'ai retrouvé Sarutobi.',
       enemy: images.sarutobi,
       class: 'sarutobi',
       img: images.foret2,

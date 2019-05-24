@@ -1,6 +1,10 @@
 <template>
   <div class="screen">
     <link rel="preload" as="image" :href="homepageImage">
+    <div>
+      <img class="pause" src="/assets/pictures/pause.svg" alt @click="pause()">
+      <img class="play" src="/assets/pictures/play.svg" alt @click="play()">
+    </div>
     <div class="flex">
       <h1>{{ message }}</h1>
       <br>
@@ -9,7 +13,7 @@
     </div>
     <img class="shika" :src="shikamaru">
     <div>
-      <audio controls preload="auto" autoplay>
+      <audio id="player" controls preload="auto" autoplay>
         <source src="../assets/musics/badSituation.mp3">
       </audio>
     </div>
@@ -61,6 +65,19 @@ export default {
       homepageImage: homepageImage
     };
   },
-  mounted() {}
+  methods: {
+    pause() {
+      const but = document.querySelector('.pause');
+      but.addEventListener('click', () => {
+        document.getElementById('player').pause();
+      });
+    },
+    play() {
+      const but = document.querySelector('.play');
+      but.addEventListener('click', () => {
+        document.getElementById('player').play();
+      });
+    }
+  }
 };
 </script>
