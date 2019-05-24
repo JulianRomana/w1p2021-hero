@@ -18,7 +18,7 @@ export default {
 
 <style>
 .screen {
-  background-image: url("/assets/pictures/fondlose.png");
+  background-image: url("/assets/pictures/losescreen.png");
   background-size: cover;
 }
 .buttonlose {
