@@ -49,15 +49,16 @@ audio {
 }
 </style>
 <script>
-import game from "../assets/data/data.js";
-const homepageImage = require("../assets/pictures/*.png");
+import game from '../assets/data/data.js';
+const homepageImage = require('../assets/pictures/*.png');
 export default {
   data() {
     return {
-      message: "Aidez naruto à retrouvez Sarutobi",
+      message: 'Aidez naruto à retrouvez Sarutobi',
       game: game,
       instructions: homepageImage.rouleau,
-      shikamaru: homepageImage.Shikamaru
+      shikamaru: homepageImage.Shikamaru,
+      homepageImage: homepageImage
     };
   },
   mounted() {}
