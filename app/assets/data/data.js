@@ -401,7 +401,7 @@ export default {
     {
       id: 7.1,
       name: 'Fôret de la mort',
-      img: images.foret1,
+      img: imagess.foret1,
       caption: 'Nous voilà dans la fôret de la mort.. Je me souviens de mon examen de chunin.',
       paths: [
         {
