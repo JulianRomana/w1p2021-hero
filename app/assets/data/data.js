@@ -1,11 +1,13 @@
 const images = require('../pictures/*.png');
 const imagess = require('../pictures/*.jpg');
+const musique = require('../musics/*.mp3');
 export default {
   phases: [
     {
       id: 1,
       name: 'Konoha',
       img: images.portedekonoha,
+      music: musique.konoha,
       caption:
         'Nous voilà Konoha le village du 3 eme hokage, partons explorer les autres villages',
       paths: [
@@ -23,6 +25,7 @@ export default {
       id: 2,
       name: 'Portes de Kiri',
       img: images.kiri,
+      music: musique.sarutobi,
       caption:
         'Kiri,le village caché de la pluie, il est réputé pour être dangereux je devrais faire attention ',
       paths: [
@@ -97,6 +100,7 @@ export default {
       id: 2.4,
       name: 'Zabuza',
       img: images.kiri,
+      music: musique.narutofight,
       caption:
         'Zabuza est un grand Ninja du village de Kiri, je suis obligé de le combattre!',
       enemy: images.zabuza,
@@ -122,6 +126,7 @@ export default {
       id: 3,
       name: 'Portes de Suna',
       img: images.suna,
+      music: musique.gogo,
       caption:
         'Suna le village caché du sable, il faut que je m\'enfonce un peu plus pour trouver quelque chose',
       paths: [
@@ -177,6 +182,7 @@ export default {
       enemy: images.sasori,
       class: 'sasori',
       caption: 'Maudit Sasori, il m\'a prit par surprise',
+      music: musique.badSituation,
       paths: [
         {
           name: 'Continuer',
@@ -188,6 +194,7 @@ export default {
       id: 3.4,
       name: 'Combat contre Sasori',
       img: images.suna,
+      music: musique.narutofight,
       enemy: images.sasori,
       class: 'sasori',
       button: 'buttonFight',
@@ -213,6 +220,7 @@ export default {
       id: 4,
       name: 'Village de Konoha',
       img: images.konoha,
+      music: musique.konoha,
       caption:
         'Me revoilà à konaha! toutes les informations que j\'ai recoltés me mène vers ces deux villages',
       paths: [
@@ -237,7 +245,8 @@ export default {
     {
       id: 5,
       name: 'Portes de Ame',
-      caption: 'Nous voilà au portes du village de la pluie',
+      music: musique.enjaille,
+      caption: 'Nous voilà au portes du village caché de la pluie',
       paths: [
         {
           name: 'Retour à Konoha',
@@ -281,6 +290,7 @@ export default {
     },
     {
       id: 5.3,
+      music: musique.narutofight,
       name: 'Pain, le chef du village',
       enemy: images.pain,
       caption:
@@ -303,6 +313,7 @@ export default {
     },
     {
       id: 6,
+      music: musique.enjaille,
       name: 'Kumo',
       caption: 'Nous voilà au Village de Kumo, connu pour sa tranquillité',
       paths: [
@@ -319,7 +330,7 @@ export default {
     {
       id: 6.1,
       name: 'Kumo 1',
-      caption: 'Il n\'y a pas un chat',
+      caption: 'Il n\'y a pas un chat, je trouve ça suspect',
       paths: [
         {
           name: 'Kumo',
@@ -363,6 +374,8 @@ export default {
     {
       id: 6.4,
       name: 'Kumo 4',
+      caption:
+        'Apparement je n\'ai pas eu de problème, je sens que je m\'approche de Sarutobi!',
       paths: [
         {
           name: 'Kumo 3',
@@ -376,6 +389,7 @@ export default {
     },
     {
       id: 7,
+      music: musique.sarutobi,
       name: 'Entrée de la forêt de la mort',
       img: imagess.foret1,
 
